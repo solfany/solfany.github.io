@@ -77,7 +77,7 @@ yml 파일에 지정한 db를 바탕으로 entity class를 작성해준다.
 
 > 해당 코드를 실행시키면 자동으로 테이블이 만들어진다.
 
-![스크린샷 2023-08-01 오후 4.18.19.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f14f4ce6-8d80-4538-b58b-ea866d700e1c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-08-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.18.19.png)
+![image](https://github.com/solfany/solfany.github.io/assets/123814718/3c82cce8-a243-4dc8-97f3-58774e260825)
 
 콘솔에 데이터베이스가 정상적으로 만들어졌음을 확인할 수 있다.
 
@@ -87,7 +87,7 @@ select * from member_table;
 
 위의 명령어를 mysql 워크벤치에 입력해보면
 
-![스크린샷 2023-08-01 오후 4.21.24.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5ff8c593-dee0-4e5b-9461-b12fce62c1a1/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-08-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.21.24.png)
+![image](https://github.com/solfany/solfany.github.io/assets/123814718/efb78aec-8c78-4059-a2da-abc273924905)
 
 위와 같이 비어있는 talble 이 의도한 바와 같이 생성된 것을 확인 할 수 있다.
 
