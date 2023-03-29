@@ -1,5 +1,5 @@
 ---
-title: "[Spring Boot] SPA "
+title: "[Spring Boot] JPA "
 categories:
   - Spring
 tags: [Java, Spring, JPA]
@@ -66,7 +66,6 @@ comments: true
    데이터베이스 연산을 추상화하고, 비즈니스 로직과 데이터베이스의 세부 구현 사이를 분리합니다.
 ```
 
-</br>
 <br>
 
 # JPA **Request and Response**
@@ -91,7 +90,6 @@ comments: true
 4. **컨트롤러**: 클라이언트에 반환할 응답을 준비한다.
 5. **클라이언트**: 최종적으로 사용자에게 데이터가 전달된다 (예: 게시글 목록, 게시글 내용 등).
 
-</br>
 <br>
 
 # Entity 와 Domain
