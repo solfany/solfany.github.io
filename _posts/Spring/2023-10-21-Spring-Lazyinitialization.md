@@ -39,12 +39,12 @@ VOC voc = vocService.findById(id);
 1.  **`@Transactional` 사용** : Service 메소드에서 **`@Transactional`** 어노테이션을 사용하여 해당 메소드가 트랜잭션 범위 내에서 실행되게 한다.
     이렇게 하면 해당 메소드 내에서 지연 로딩을 사용하여 연관된 데이터를 가져올 수 있다.
 
-        ```java
-        @Transactional
-        public VOC findById(Long id) {
-          return vocRepository.findById(id).orElse(null);
-        }
-        ```
+    ```java
+    @Transactional
+    public VOC findById(Long id) {
+    return vocRepository.findById(id).orElse(null);
+    }
+    ```
 
 <br/>
 
