@@ -165,3 +165,4 @@ java에서는 `try`, `catch`, `throw`, `throws`, `finally`의 5가지 키�
 만약 `try` 블럭 안에서 exception이 발생하면 해당 exception은 JVM에 던져진다. 그리고 `catch` 블럭을 사용하면 해당 exception을 처리할 수 있다. 
 수동으로 exception을 발생시키기 위해서는 `throw` 키워드를 이용할 수 있다. 호출 한 쪽으로 exception을 위임하기 위해서는 `thorws` 키워드를 사용할 수 있다. try - catch에서 반드시 실행시켜야하는 코드가 있다면 `finally` 블럭에 작성하면 된다.
 
+[맨 위로 이동하기](#){: .btn .btn--primary }{: .align-right}
