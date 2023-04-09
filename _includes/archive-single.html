@@ -17,25 +17,20 @@
       <img src="{{ teaser | relative_url }}" alt="">
     </div>
     {% endif %}
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <h5 class="archive__item-title no_toc" itemprop="headline">
       {% if post.link %}
       <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i
           class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
       <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
-    </h2>
+    </h5>
     {% if post.categories[0] != null %}
     <p class="archive__item-excerpt"><i class="far fa-calendar-alt"></i> {{ post.date | date: "%m/%d/%Y" }} &nbsp; <i
         class="far fa-folder-open"></i> {{ post.categories }}</p>
     {% else %}
     <p class="archive__item-excerpt"><i class="far fa-calendar-alt"></i> {{ post.date | date: "%m/%d/%Y" }}
       {% endif %}
-      <!-- 태그 추가 -->
-      {% if post.tags[0] != null %}
-    <p class="archive__item-excerpt"><i class="far fa-tags"></i> {{ post.tags }} </p>
-    {% endif %}
-
     {% include page__meta.html type=include.type %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify |
       strip_html | truncate: 160 }}</p>{% endif %}
