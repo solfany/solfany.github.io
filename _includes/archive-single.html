@@ -14,11 +14,11 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: xx-small;
     /* 항목들 사이의 간격 */
   }
 
   .meta-info span {
-    font-size: xx-small;
     margin: 0;
     white-space: nowrap;
     /* 한 줄에 나타내기 */
@@ -45,11 +45,12 @@
       <span><i class="far fa-folder-open"></i> {{ post.categories | join: ", " }}</span>
       {% endif %}
       <span><i class="far fa-calendar-alt"></i> {{ post.date | date: "%m/%d/%Y" }}</span>
-      {% include page__meta.html type=include.type %}
-      {% if post.excerpt %}
-      <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160
-        }}</p>
-      {% endif %}
+      <!-- '몇 분 전' 정보를 나타내려면 여기에 코드 추가 -->
     </div>
+    {% include page__meta.html type=include.type %}
+    {% if post.excerpt %}
+    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160
+      }}</p>
+    {% endif %}
   </article>
 </div>
