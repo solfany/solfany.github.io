@@ -33,7 +33,7 @@
       {% endif %}
       <!-- 태그 추가 -->
       {% if post.tags[0] != null %}
-    <p class="archive__item-excerpt"><i class="far fa-tags"></i> {★{ post.tags }} </p>
+    <p class="archive__item-excerpt"><i class="far fa-tags"></i> {{ post.tags }} </p>
     {% endif %}
 
     {% include page__meta.html type=include.type %}
