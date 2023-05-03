@@ -18,7 +18,7 @@ minimal_mistakes_skin: "default" # "green" "air", "aqua", "contrast", "dark", "d
 locale: "en-US"
 title: "개발 공부 기록"
 title_separator: "-"
-subtitle: "sofany"
+# subtitle: ""
 name: "fany"
 # description              : ""
 url: "https://solfany.github.io"
@@ -111,7 +111,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "solfany1999@gmail.com"
+      url: "mailto:solfany1999@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://github.com/solfany"
