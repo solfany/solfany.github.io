@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Board"
+title: "Board project"
 permalink: /Board
 author_profile: true
 sidebar:

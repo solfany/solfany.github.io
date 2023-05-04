@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Erp"
+title: "Erp project"
 permalink: /Erp
 author_profile: true
 sidebar:
