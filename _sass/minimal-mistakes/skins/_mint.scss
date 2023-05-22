@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Mint skin
+   ========================================================================== */
+
+/* Colors */
+$background-color: #d1dae3 !default;
+$text-color: #37344c !default;
+$muted-text-color: #48344d !default;
+$primary-color: #696f98 !default;
+$border-color: mix(#fff, #6483a1, 75%) !default;
+$footer-background-color: #a1b4c6 !default;
+$link-color: #8084a7 !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#2a2c3d, $text-color, 80%) !default;
+
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer-follow .social-icons i,
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
