@@ -8,7 +8,7 @@ toc_label: "목록"
 toc_icon: "bars"
 ---
 
-![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/1.png?raw=true)
+![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/3.png?raw=true)
 
 ## 변수란(variable)
 
@@ -170,7 +170,7 @@ public class VarEx1 {
 
 ## 리터럴의 접두사와 접미사
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ccb6a772-416a-4853-b664-312b115171c8/Untitled.png)
+![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/variable/1.png?raw=true)
 
 **모든 값에는 타입이 있다.**
 
