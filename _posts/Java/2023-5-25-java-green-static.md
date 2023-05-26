@@ -10,10 +10,6 @@ toc_icon: "bars"
 
 ![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/3..png?raw=true)
 
-> 해당 문제는 fastcampus의 java&Spring 부트 캠프에서 진행된 과정에서
-> 제출된 문제를 풀이 한 것임을 참고 바란다. <br>
-> 2023년 5월 25일
-
 # Static 이란
 
 < static > 을 선언하면 메모리에 계속 상주한다.
