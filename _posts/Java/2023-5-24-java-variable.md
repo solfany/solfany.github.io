@@ -8,7 +8,7 @@ toc_label: "목록"
 toc_icon: "bars"
 ---
 
-![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/3.png?raw=true)
+![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/3..png?raw=true)
 
 ## 변수란(variable)
 
