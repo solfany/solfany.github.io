@@ -5,46 +5,41 @@ main:
   - title: "Tags"
     url: /tags/
 
-
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
 
 sidebar-category:
-    - title: "💻PROGRAMMING"  
-      children:
-        - title: "📁JavaScript"
-          url:  "/JavaScript"
-          category: "JavaScript"
-        - title: "📁React"
-          url:  "/React"
-          category: "React"
-        - title: "📁Java"
-          url:  "/Java"
-          category: "Java"
+  - title: "💻PROGRAMMING"
+    children:
+      - title: "📁JavaScript"
+        url: "/JavaScript"
+        category: "JavaScript"
+      - title: "📁React"
+        url: "/React"
+        category: "React"
+      - title: "📁Java"
+        url: "/Java"
+        category: "Java"
+      - title: "Spring"
+        url: "/Spring"
+        category: "Spring"
 
+  - title: "💻SERVER"
+    children:
+      - title: "📁Network"
+        url: "/Network"
+        category: "Network"
 
-    - title: "💻SERVER"  
-      children:
-        - title: "📁Network"
-          url:  "/Network"
-          category: "Network"
-          
-          
-    - title: "💻ETC"  
-      children:
-        - title: "📁Git & Github"
-          url:  "/Github"
-          category: "Github"
-        - title: "📁Blog Dev"
-          url:  "/Blog"
-          category: "Blog"
-        - title: "📁Code Review"
-          url:  "/Review"
-          category: "Review"
-
-
-
-
-
+  - title: "💻ETC"
+    children:
+      - title: "📁Git & Github"
+        url: "/Github"
+        category: "Github"
+      - title: "📁Blog Dev"
+        url: "/Blog"
+        category: "Blog"
+      - title: "📁Code Review"
+        url: "/Review"
+        category: "Review"
