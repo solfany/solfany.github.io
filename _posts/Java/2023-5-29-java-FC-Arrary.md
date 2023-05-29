@@ -208,7 +208,7 @@ public class ObjectCopy2 {
 
 <br>
 
-# 2차원 배열 사용하기
+# 차원 배열 사용하기
 
 ## 다차원 배열
 
@@ -220,7 +220,7 @@ public class ObjectCopy2 {
 ![image](https://github.com/solfany/solfany/assets/123814718/7a58567b-8403-4c2c-9bc3-dccffd97056f)
 
 ```java
-int[][] arr = {{1,2,3}, {4,5,6}}
+// int[][] arr = {{1,2,3}, {4,5,6}}
 ```
 
 ```java
