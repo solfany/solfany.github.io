@@ -205,7 +205,8 @@ public class ObjectCopy2 {
 ![image](https://github.com/solfany/solfany/assets/123814718/8deca474-968e-4d92-8ada-9d9b09126a39)
 
 <br>
-<br>
+
+# 2차원 배열 사용하기
 
 ## 다차원 배열
 
@@ -214,10 +215,13 @@ public class ObjectCopy2 {
 
 ## 이차원 배열 예제
 
+- 이차원 이상으로 구현 된 배열
+- 평면 (이차원 배열) 이나 공간(삼차원 배열)을 활용한 프로그램 구현
+
 ![image](https://github.com/solfany/solfany/assets/123814718/7a58567b-8403-4c2c-9bc3-dccffd97056f)
 
 ```java
-int[][] arr = {{1,2,3}, {4,5,6}}
+int[][] arr = { {1,2,3}, {4,5,6}}
 ```
 
 ```java
