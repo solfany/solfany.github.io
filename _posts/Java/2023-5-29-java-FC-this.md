@@ -16,15 +16,11 @@ toc_icon: "bars"
 - 생성자에서 또 다른 생성자를 호출 할때 사용
 - 자신의 주소(참조값)을 반환 함
 
-<br>
-
-<br>
-
 ## 생성된 인스턴스 메모리의 주소를 가짐
 
 - 클래스 내에서 참조변수가 가지는 주소 값과 동일 한 주소 값을 가지는 키워드
 
-![image](https://github.com/solfany/solfany/assets/123814718/89ca7aef-6735-4e84-94dc-fb0fdf591213)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3397bbb5-ecdc-4ed0-aceb-0ae78b3e7192/Untitled.png)
 
 ```java
 public void setYear(int year)
@@ -32,9 +28,6 @@ public void setYear(int year)
     this.year = year;
 }
 ```
-
-<br>
-<br>
 
 ## 생성자에서 다른 생성자를 호출 하는 this
 
@@ -57,9 +50,6 @@ public class Person {
 	}
 }
 ```
-
-<br>
-<br>
 
 ## 자신의 주소를 반환하는 this
 
@@ -96,4 +86,4 @@ public class Person {
 }
 ```
 
-![image](https://github.com/solfany/solfany/assets/123814718/659271af-de73-4b1b-8a3c-57b8664d36f1)
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e6ce3a9f-a3e1-4e6b-b40d-a2a286ef42f8/Untitled.png)
