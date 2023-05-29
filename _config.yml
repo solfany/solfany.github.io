@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt"(커스텀), "neon", "mint(커스텀)", "plum", "sunrise", "default"
+minimal_mistakes_skin    : "green" # "green" "air", "aqua", "contrast", "dark", "dirt"(커스텀), "neon", "mint(커스텀)", "plum", "sunrise", "default"
 
 # Site Settings
 locale                   : "en-US"
@@ -113,7 +113,7 @@ author:
   links:
     - label: "mail"
       icon: "fas fa-fw fa-envelope-square"
-      url: "solfany1999@gmail.com"
+        url: "solfany1999@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://github.com/solfany"
