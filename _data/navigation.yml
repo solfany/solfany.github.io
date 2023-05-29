@@ -22,7 +22,7 @@ sidebar-category:
       - title: "📁Java"
         url: "/Java"
         category: "Java"
-      - title: "Spring"
+      - title: "📁Spring"
         url: "/Spring"
         category: "Spring"
 
@@ -43,3 +43,5 @@ sidebar-category:
       - title: "📁Code Review"
         url: "/Review"
         category: "Review"
+
+        <!--방문자 수 -->

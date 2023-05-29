@@ -111,12 +111,12 @@ author:
   location         : "South Korea"
 
   links:
-    - label: "Email"
+    - label: "solfany1999@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
       url: "solfany1999@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://github.com/solfany"
+      # url: "https://github.com/solfany"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -125,7 +125,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "solfany.github.io"
+      url: "https://github.com/solfany"
 #     - label: "Instagram"
 #       icon: "fab fa-fw fa-instagram"
 #       url: "https://www.instagram.com/solfany99/"
@@ -141,7 +141,7 @@ footer:
 #       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "solfany.github.io"
+      url: "https://github.com/solfany"
 #     - label: "GitLab"
 #       icon: "fab fa-fw fa-gitlab"
 #       # url: 
