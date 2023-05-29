@@ -113,7 +113,7 @@ author:
   links:
     - label: "mail"
       icon: "fas fa-fw fa-envelope-square"
-        url: "solfany1999@gmail.com"
+      url: "solfany1999@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://github.com/solfany"
