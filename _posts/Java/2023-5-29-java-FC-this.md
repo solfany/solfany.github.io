@@ -6,6 +6,7 @@ tags: [Java, Fastcampus]
 toc_sticky: true
 toc_label: "목록"
 toc_icon: "bars"
+comments: true
 ---
 
 ![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/fast-main.png?raw=true)
