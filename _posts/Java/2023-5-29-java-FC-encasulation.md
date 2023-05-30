@@ -75,4 +75,8 @@ public class TestReprt {
 }
 ```
 
+<div style: width:30px>
+
 ![image](https://github.com/solfany/solfany/assets/123814718/c49131b5-18ea-4886-a780-d946f5e69624)
+
+</div>

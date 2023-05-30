@@ -21,7 +21,7 @@ comments: true
 
 - 클래스 내에서 참조변수가 가지는 주소 값과 동일 한 주소 값을 가지는 키워드
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3397bbb5-ecdc-4ed0-aceb-0ae78b3e7192/Untitled.png)
+![image](https://github.com/solfany/blog-comments/assets/123814718/1985c4ac-dd2a-448f-8b2e-bcce2ab395d4)
 
 ```java
 public void setYear(int year)
@@ -51,6 +51,8 @@ public class Person {
 	}
 }
 ```
+
+<br>
 
 ## 자신의 주소를 반환하는 this
 
@@ -87,4 +89,4 @@ public class Person {
 }
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e6ce3a9f-a3e1-4e6b-b40d-a2a286ef42f8/Untitled.png)
+![image](https://github.com/solfany/blog-comments/assets/123814718/0ce5f39e-3a27-4775-98da-16f52fd75a7a)

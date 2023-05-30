@@ -102,8 +102,11 @@ public class BookArrayTest {
 ```
 
 <br>
+<div style= width:300px>
 
 ![image](https://github.com/solfany/solfany/assets/123814718/aefc4e4d-9b24-48c8-aaf8-3003e10ea911)
+
+</div>
 
 **Array 사용시 주의 해야할 점**
 
@@ -154,7 +157,11 @@ public class ObjectCopy {
 }
 ```
 
+<div style= width:300px>
+
 ![image](https://github.com/solfany/solfany/assets/123814718/cdea24eb-c4e8-42d9-8441-6853e42bde43)
+
+</div>
 
 - 깊은 복사
 
@@ -202,8 +209,11 @@ public class ObjectCopy2 {
 }
 ```
 
+<div style= width:300px>
+
 ![image](https://github.com/solfany/solfany/assets/123814718/8deca474-968e-4d92-8ada-9d9b09126a39)
 
+</div>
 <br>
 
 # 2차원 배열 사용하기
@@ -242,7 +252,11 @@ public class TwoDimensionTest {
 }
 ```
 
+<div style=width:300px>
+
 ![image](https://github.com/solfany/solfany/assets/123814718/a2994122-259f-4d15-82b8-b3f77702790d)
+
+</div>
 
 <br>
 
