@@ -23,7 +23,7 @@ name                     : "fany"
 # description              : ""
 url                      : "https://solfany.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "solfany/solfany.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "solfany/blog-comments" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 # teaser                   : "/assets/images/tig.png"
 # logo                     : "/assets/images/purple round moon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 # masthead_title           : "solfany" # overrides the website title displayed in the masthead, use " " for no title
