@@ -1,5 +1,5 @@
 ---
-title: "[Java] 클래스 구성 요소와 생성자)"
+title: "[Java] 클래스 구성 요소와 생성자"
 categories:
   - Java
 tags: [Java]
