@@ -195,7 +195,7 @@ Calc calc = new CompleteCalc();
 - 클래스 상속과 달리 구현 코드가 없으므로 여러 인터페이스를 구현할 수 있음 ( cf. extends)
 - 형 변환되는 경우 인터페이스에 선언된 메서드만을 사용가능함
 
-<img src= "https://github.com/solfany/project02/assets/123814718/996ef38f-3fb2-48bd-ae74-0f51628b52e3 />
+<img src= "https://github.com/solfany/project02/assets/123814718/996ef38f-3fb2-48bd-ae74-0f51628b52e3" />
 
 # 2. 인터페이스는 왜 쓰는가?
 
@@ -215,9 +215,9 @@ Calc calc = new CompleteCalc();
 - 하나의 인터페이스를 여러 객체가 구현하게 되면 클라이언트 프로그램은 인터페이스의 메서드를 활용하여 여러 객체의 구현을 사용할 수 있음 ( 다형성)
 - 여러가지 예
 
-<img src= "https://github.com/solfany/project02/assets/123814718/230a2a38-dddc-402c-af72-f7942802d209" width="500"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/230a2a38-dddc-402c-af72-f7942802d209" />
 
-<img src= "https://github.com/solfany/project02/assets/123814718/9c012a15-a1c6-497f-9da0-631d70779aa5" width="500"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/9c012a15-a1c6-497f-9da0-631d70779aa5" />
 
 ## 3-2 인터페이스를 활용한 dao 구현하기
 
@@ -687,7 +687,7 @@ public class MyClassTest {
 
 - 실무에서 프레임워크나 오픈소스와 함께 연동되는 구현을 하게 되면 클래스 상속과 인터페이스의 구현을 같이 사용하는 경우가 많음
 
-<img src= "https://github.com/solfany/project02/assets/123814718/ec51a30c-0dce-472c-8eac-0878c0406260" width="300"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/ec51a30c-0dce-472c-8eac-0878c0406260" width="500"/>
 
 - 책이 순서대로 대여가 되는 도서관 구현
 - 책을 보관하는 자료 구조가 Shelf에 구현됨 (ArrayList)
