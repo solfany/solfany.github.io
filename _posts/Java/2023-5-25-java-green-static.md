@@ -132,11 +132,7 @@ Instance 객체 가운데 메모리에 할당되어 상주하고 있는 실체�
 - 카드회사에서 카드를 새로 발급할때마다 새로운 카드 번호를 부여
 - 회사에 사원이 입사할때 마다 새로운 사번이 필요한
 
-<div style=width:300px>
-
 ![image](https://github.com/solfany/solfany/assets/123814718/c889a404-6bd8-4703-b998-224c6990b881)
-
-</div>
 
 ## static 변수 선언과 사용하기
 
@@ -208,11 +204,7 @@ public class EmployeeTest {
 
 <br>
 
-<div style=width:300px>
-
 ![image](https://github.com/solfany/solfany/assets/123814718/55d0f29f-789e-457d-8a81-7d4d0bb245b4)
-
-</div>
 
 인스턴스가 하나의 메모리 공간을 가르킨다.
 
@@ -258,11 +250,8 @@ public class EmployeeTest {
 }
 ```
 
-<div style=width:300px>
-
 ![image](https://github.com/solfany/solfany/assets/123814718/dc2fff9f-f5ed-4ce0-9793-5f154ec9902a)
 
-</div>
 <br>
 
 ## static 변수와 메서드는 인스턴스 변수, 메서드가 아니므로 클래스 이름으로 직접 참조
@@ -399,11 +388,7 @@ public class CompanyTest {
 }
 ```
 
-<div style=width:300px>
-
 ![image](https://github.com/solfany/solfany/assets/123814718/570291ce-862b-4dbf-bb8d-d2828d9a9853)
-
-</div>
 
 ```
 클래스다이어그램
