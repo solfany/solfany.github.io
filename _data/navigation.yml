@@ -34,7 +34,7 @@ sidebar-category:
 
   - title: "💻CODING TEST"
     children:
-      - title: "baekjoon"
+      - title: "백준"
         url: "/Baekjoon"
         category: "Baekjoon"
 
