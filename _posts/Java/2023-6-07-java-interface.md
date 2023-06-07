@@ -27,7 +27,7 @@ comments: true
 
 하지만 인터페이스(interface)는 오로지 추상 메소드와 상수만을 포함할 수 있다.
 
-<img src = https://github.com/solfany/project02/assets/123814718/a8cd8353-1160-481e-b167-307d548f54c0 width="500"/>
+<img src = "https://github.com/solfany/project02/assets/123814718/a8cd8353-1160-481e-b167-307d548f54c0" width="500"/>
 
 - 모든 메서드가 추상 메서드로 선언됨 public abstract
 - 모든 변수는 상수로 선언됨 public static final
@@ -101,7 +101,7 @@ class 클래스이름 implements 인터페이스이름 { ... }
 
 만약 모든 추상 메소드를 구현하지 않는다면, abstract 키워드를 사용하여 추상 클래스로 선언해야 한다.
 
-<img src= https://github.com/solfany/project02/assets/123814718/3a2ce834-3d34-4e3e-aea5-b5938fef5eff width="300" />
+<img src= "https://github.com/solfany/project02/assets/123814718/3a2ce834-3d34-4e3e-aea5-b5938fef5eff" width="300" />
 
 Calc.java
 
@@ -181,7 +181,7 @@ public class CalculatorTest {
 <br>
 <br>
 
-<img src= https://github.com/solfany/project02/assets/123814718/4b848416-1f33-46b8-8ca7-093c77cd6593 width="300" />
+<img src= "https://github.com/solfany/project02/assets/123814718/4b848416-1f33-46b8-8ca7-093c77cd6593" width="300" />
 
 ## 1-5. 인터페이스 구현과 형 변환
 
@@ -195,7 +195,7 @@ Calc calc = new CompleteCalc();
 - 클래스 상속과 달리 구현 코드가 없으므로 여러 인터페이스를 구현할 수 있음 ( cf. extends)
 - 형 변환되는 경우 인터페이스에 선언된 메서드만을 사용가능함
 
-<img src= https://github.com/solfany/project02/assets/123814718/996ef38f-3fb2-48bd-ae74-0f51628b52e3 />
+<img src= "https://github.com/solfany/project02/assets/123814718/996ef38f-3fb2-48bd-ae74-0f51628b52e3 />
 
 # 2. 인터페이스는 왜 쓰는가?
 
@@ -215,9 +215,9 @@ Calc calc = new CompleteCalc();
 - 하나의 인터페이스를 여러 객체가 구현하게 되면 클라이언트 프로그램은 인터페이스의 메서드를 활용하여 여러 객체의 구현을 사용할 수 있음 ( 다형성)
 - 여러가지 예
 
-<img src= https://github.com/solfany/project02/assets/123814718/230a2a38-dddc-402c-af72-f7942802d209 width="500"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/230a2a38-dddc-402c-af72-f7942802d209" width="500"/>
 
-<img src= https://github.com/solfany/project02/assets/123814718/9c012a15-a1c6-497f-9da0-631d70779aa5 width="500"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/9c012a15-a1c6-497f-9da0-631d70779aa5" width="500"/>
 
 ## 3-2 인터페이스를 활용한 dao 구현하기
 
@@ -225,7 +225,7 @@ Calc calc = new CompleteCalc();
 - 환경파일(db.properties) 에서 database의 종류에 대한 정보를 읽고 그 정보에 맞게 dao 인스턴스를 생성하여 실행될 수 있게 함
 - source hierachy
 
-<img src= https://github.com/solfany/project02/assets/123814718/860f92f0-6907-4388-a384-4bd6bf9767a9 width="400"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/860f92f0-6907-4388-a384-4bd6bf9767a9" width="400"/>
 
 UserInfo.java (사용자 정보 클래스)
 
@@ -362,7 +362,7 @@ db.properties 환경파일이 MYSQL 일때
 
 실행결과
 
-<img src= https://github.com/solfany/project02/assets/123814718/6f4d7ebc-b467-45d7-9022-59666ac642fa width="300"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/6f4d7ebc-b467-45d7-9022-59666ac642fa" width="300"/>
 
 db.properties 환경파일이 ORACLE 일때
 
@@ -370,7 +370,7 @@ db.properties 환경파일이 ORACLE 일때
 
 실행결과
 
-<img src= https://github.com/solfany/project02/assets/123814718/09bb45c2-9805-4f43-b4bf-d7552303d10c width="300"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/09bb45c2-9805-4f43-b4bf-d7552303d10c" width="300"/>
 
 # 4. 인터페이스의 여러가지 요소
 
@@ -453,7 +453,7 @@ private static void mystaticMethod() {
 - 디폴트 메서드가 중복 되는 경우는 구현 하는 클래스에서 재정의 하여야 함
 - 여러 인터페이스를 구현한 클래스는 인터페이스 타입으로 형 변환 되는 경우 해당 인터페이스에 선언된 메서드만 사용 가능 함
 
-<img src= https://github.com/solfany/project02/assets/123814718/11b6aa92-a0f8-464f-aa11-27584b08cf41 width="300"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/11b6aa92-a0f8-464f-aa11-27584b08cf41" width="300"/>
 
 Sell.java
 
@@ -607,7 +607,7 @@ public class CustomerTest {
 - extends 키워드를 사용
 - 인터페이스는 다중 상속이 가능하고 구현 코드의 상속이 아니므로 타입 상속 이라고 함
 
-<img src= https://github.com/solfany/project02/assets/123814718/79698188-24ea-4fb6-a995-af778099c0e5 width="300"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/79698188-24ea-4fb6-a995-af778099c0e5" width="300"/>
 
 X.java
 
@@ -687,7 +687,7 @@ public class MyClassTest {
 
 - 실무에서 프레임워크나 오픈소스와 함께 연동되는 구현을 하게 되면 클래스 상속과 인터페이스의 구현을 같이 사용하는 경우가 많음
 
-<img src= https://github.com/solfany/project02/assets/123814718/ec51a30c-0dce-472c-8eac-0878c0406260 width="300"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/ec51a30c-0dce-472c-8eac-0878c0406260" width="300"/>
 
 - 책이 순서대로 대여가 되는 도서관 구현
 - 책을 보관하는 자료 구조가 Shelf에 구현됨 (ArrayList)
@@ -771,7 +771,7 @@ public class BookShelfTest {
 }
 ```
 
-<img src= https://github.com/solfany/project02/assets/123814718/26ffe725-e180-4c9a-a3a6-95e7178c3d2f width="300"/>
+<img src= "https://github.com/solfany/project02/assets/123814718/26ffe725-e180-4c9a-a3a6-95e7178c3d2f" width="300"/>
 
 ## 실습
 
