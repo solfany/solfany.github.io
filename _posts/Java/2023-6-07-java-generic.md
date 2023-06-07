@@ -24,7 +24,7 @@ List 변수에는 String 객체만 추가 할 수 있으며, 다른 타입의 �
 
 제네릭을 사용하면 프로그램의 타입 안정성을 보장 하게 된다.
 
-!https://blog.kakaocdn.net/dn/b61TxD/btrFKavUCz5/4Rr4z8CUU5ycitPC7tmmuk/img.png
+![img](https://blog.kakaocdn.net/dn/b61TxD/btrFKavUCz5/4Rr4z8CUU5ycitPC7tmmuk/img.png)
 
 ArrayList 내부
 
