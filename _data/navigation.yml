@@ -32,6 +32,12 @@ sidebar-category:
         url: "/Network"
         category: "Network"
 
+  - title: "💻CODING TEST"
+    children:
+      - title: "baekjoon"
+        url: "/Baekjoon"
+        category: "Baekjoon"
+
   - title: "💻ETC"
     children:
       - title: "📁Git & Github"
