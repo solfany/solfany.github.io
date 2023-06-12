@@ -17,7 +17,11 @@ comments: true
 
 설치 - https://code.visualstudio.com/download
 
-- 유용한 플러그인 - https://marketplace.visualstudio.com/VSCode한글 팩 - https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-koopen in browser - https://marketplace.visualstudio.com/items?itemName=techer.open-in-browserPrettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscodeindent-rainbow - https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow태그이름 자동변경 - https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
+- 유용한 플러그인 - https://marketplace.visualstudio.com/VSCode한글 팩 - https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ko
+- open in browser - https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser
+- Prettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+- indent-rainbow - https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow
+- 태그이름 자동변경 - https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
 
 <br>
 
@@ -26,8 +30,7 @@ comments: true
 ### git 설치
 
 [Windows] https://git-scm.com/download/win
-
-[Mac] 먼저 terminal열고, 아래와 같이 입력하고 엔터치세요.
+[Mac] 먼저 terminal열고, 아래와 같이 입력하고 엔터
 
 `$ git`
 
@@ -36,7 +39,7 @@ comments: true
 `$ git --version  
 git version 2.28.0`
 
-위와 같이 나오면 설치가 잘된 것입니다. 버전이 조금 달라도 괜찮습니다.
+위와 같이 나오면 설치가 잘된 것입니다. 버전이 조금 달라도 괜찮ㅏ
 
 <br>
 
