@@ -9,7 +9,7 @@ toc_icon: "bars"
 comments: true
 ---
 
-![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/1.png?raw=true)
+![Untitled](https://tecoble.techcourse.co.kr/static/f11e41fcb46e962e898e8816ba02d5f5/6050d/spring.png)
 
 ## 1. 개발 도구 설치 & 설정
 
