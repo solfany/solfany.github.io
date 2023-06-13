@@ -32,7 +32,7 @@ sidebar-category:
         url: "/Aws"
         category: "Aws"
 
-    - title: "💻COMPUTER SCIENCE"
+  - title: "💻COMPUTER SCIENCE"
     children:
       - title: "📁Software engineering"
         url: "/Software"
