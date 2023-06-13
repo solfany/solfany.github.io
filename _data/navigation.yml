@@ -28,12 +28,18 @@ sidebar-category:
 
   - title: "💻SERVER"
     children:
-      - title: "📁Network"
-        url: "/Network"
-        category: "Network"
       - title: "📁AWS"
         url: "/Aws"
         category: "Aws"
+
+    - title: "💻COMPUTER SCIENCE"
+    children:
+      - title: "📁Software engineering"
+        url: "/Software"
+        category: "Software"
+      - title: "📁Network"
+        url: "/Network"
+        category: "Network"
 
   - title: "💻CODING TEST"
     children:
