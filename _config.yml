@@ -111,7 +111,7 @@ author:
   location         : "South Korea"
 
   links:
-    - label: "mail"
+    - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "solfany1999@gmail.com"
     - label: "Website"
