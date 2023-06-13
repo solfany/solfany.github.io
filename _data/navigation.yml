@@ -31,6 +31,9 @@ sidebar-category:
       - title: "📁Network"
         url: "/Network"
         category: "Network"
+      - title: "📁AWS"
+        url: "/Aws"
+        category: "Aws"
 
   - title: "💻CODING TEST"
     children:
