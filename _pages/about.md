@@ -23,3 +23,7 @@ sidebar:
 
 
 
+## 외부 활동
+
+![image](https://github.com/solfany/solfany.github.io/assets/123814718/64500051-20f8-4bf8-9b0d-655750a8a531)
+
