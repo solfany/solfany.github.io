@@ -26,6 +26,16 @@ sidebar-category:
         url: "/Spring"
         category: "Spring"
 
+  - title: "DATABASE"
+    children:
+      - title: "📁Oracle"
+        url: "/Oracle"
+        category: "Oracle"
+      - title: "📁Mysql"
+        url: "/Mysql"
+        category: "Mysql"
+
+
   - title: "💻SERVER"
     children:
       - title: "📁AWS"
