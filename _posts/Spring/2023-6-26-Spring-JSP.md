@@ -1,8 +1,8 @@
 ---
-title: "[Spring]서블릿 과 JSP"
+title: "[Java]서블릿 과 JSP"
 categories:
   - Spring
-tags: [Spring]
+tags: [Java]
 toc_sticky: true
 toc_label: "목록"
 toc_icon: "bars"
@@ -21,7 +21,8 @@ comments: true
 
 - 스프링 서버 개발자 입장에서는 시작점과 끝점으로 보이지만, 사실 스프링이 사용자의 요청 (Request)과 응답 (Response)을 처리해 주고 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/60fc0026-fe35-4efc-9c7d-db23f89af653/Untitled.png)
+![image](https://github.com/solfany/solfany.github.io/assets/123814718/ecda9862-ec44-476e-845e-753cafeeee6b)
+
 
 ## 서블릿의 생명 주기
 
@@ -72,7 +73,9 @@ init 은 처음 한번만 호출이 되고, 다음으로
 
 서블릿이 메모리에서 내려올 때 리로딩 되거나 웹 어플리케이션이 종료될 때 호출이 된다.
 
-![스크린샷 2023-06-26 오전 11.09.15.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/358756fc-b768-450c-80c5-8436e5aba440/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-06-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.09.15.png)
+![image](https://github.com/solfany/solfany.github.io/assets/123814718/a5e05738-9bc8-446f-aa0b-a077e678dd9b)
+
+
 
 위의 코드를 실행시켜보면 서버에는 아무것도 뜨지 않지만 콘솔창에 정상적으로 값이 나온 걸 확인 할 수있다.
 
@@ -80,7 +83,7 @@ init 은 처음 한번만 호출이 되고, 다음으로
 
 ## 서블릿의 생명 주기
 
-![스크린샷 2023-06-26 오전 11.40.40.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/705910d0-033b-447c-98c2-660f158b591d/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-06-26_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.40.40.png)
+![image](https://github.com/solfany/solfany.github.io/assets/123814718/e95d8292-653c-419c-9f7a-da75b760455e)
 
 요청이 오면 Servlet Context 에서 확인을 한다.
 
