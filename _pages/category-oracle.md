@@ -1,10 +1,13 @@
 ---
 layout: archive
-title: "Mysql"
-permalink: /Mysql
+title: "Oracle"
+permalink: /Oracle
 author_profile: true
 sidebar:
   nav: "sidebar-category"
 ---
 
-{% assign posts = site.categories.Mysql %} {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+
+{% assign posts = site.categories.Oracle %}
+{% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
+
