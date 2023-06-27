@@ -26,7 +26,7 @@ sidebar-category:
         url: "/Spring"
         category: "Spring"
 
-  - title: "DATABASE"
+  - title: "💻DATABASE"
     children:
       - title: "📁Oracle"
         url: "/Oracle"
