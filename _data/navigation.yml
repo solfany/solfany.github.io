@@ -68,3 +68,6 @@ sidebar-category:
       - title: "📁Code Review"
         url: "/Review"
         category: "Review"
+      - title: "📁Incorrect answer note"
+        url: "/Note"
+        category: "Note"
