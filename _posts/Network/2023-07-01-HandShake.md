@@ -1,5 +1,5 @@
 ---
-title: "[Network] 3way - HandShake & 43way - HandShake"
+title: "[Network] 3way - HandShake & 4way - HandShake"
 categories:
   - Network
 tags: [Network]
@@ -7,8 +7,6 @@ toc_sticky: true
 toc_label: "목록"
 toc_icon: "bars"
 ---
-
-# 3way - HandShake
 
 ## **TCP 3-way Handshake 란?**
 
