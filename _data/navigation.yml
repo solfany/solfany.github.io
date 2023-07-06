@@ -50,6 +50,9 @@ sidebar-category:
       - title: "📁Network"
         url: "/Network"
         category: "Network"
+      - title: "📁Linux"
+        url: "/Linux"
+        category: "Linux"
 
   - title: "💻CODING TEST"
     children:
