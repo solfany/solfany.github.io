@@ -1,5 +1,5 @@
 ---
-title: "[Network] Well-Known Port 번호"
+title: "[Network] ping, pathping tracert"
 categories:
   - Network
 tags: [Network]
@@ -7,8 +7,6 @@ toc_sticky: true
 toc_label: "목록"
 toc_icon: "bars"
 ---
-
-# ping, pathping tracert
 
 ```bash
 	ping icqa.or.kr
