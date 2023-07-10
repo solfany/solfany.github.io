@@ -1,5 +1,5 @@
 ---
-title: "[Java]외부 파일 import 또는 export"
+title: "[Spring MVC]외부 파일 import 또는 export"
 categories:
   - Spring
 tags: [Java]
