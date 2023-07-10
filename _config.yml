@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "air" # "green" "air", "aqua", "contrast", "dark", "d
 
 # Site Settings
 locale                   : "en-US"
-title                    : "𝐒𝐎𝐋𝐅𝐀𝐍𝐘"
+title                    : "기록하는 개발인"
 title_separator          : "-"
-subtitle                 : "개발 공부 기록 "
+subtitle                 : "뚬칫 뚬칫"
 name                     : "fany"
 # description              : ""
 url                      : "https://solfany.github.io"
