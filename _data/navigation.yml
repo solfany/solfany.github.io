@@ -35,12 +35,17 @@ sidebar-category:
         url: "/Mysql"
         category: "Mysql"
 
-
   - title: "💻SERVER"
     children:
       - title: "📁AWS"
         url: "/Aws"
         category: "Aws"
+
+  - title: "💻COMPUTING PLATFORM"
+    children:
+      - title: "📁Docker"
+        url: "/Docker"
+        category: "Docker"
 
   - title: "💻COMPUTER SCIENCE"
     children:

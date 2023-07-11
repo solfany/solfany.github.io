@@ -12,7 +12,7 @@ toc_icon: "bars"
 
 [(사)한국정보통신자격협회](https://www.icqa.or.kr/cn/)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/379d91db-999f-48b5-883b-0afbc63aa442/Untitled.png)
+![image](https://github.com/solfany/solfany.github.io/assets/123814718/b7f8e08b-cf79-4fc8-8a24-6cf9fdbd00d4)
 
 1. 홈페이지 우측 상단에 고객지원 → 자료실 클릭
 2. 검색창 하단에서 네트워크관리사 선택
@@ -20,7 +20,7 @@ toc_icon: "bars"
 4. 하단의 zip 파일 다운로드
 5. 압축 해제 (배경화면 권장~ 연습 많이 해야하니까~)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/06858be2-4cb0-4e25-8f28-120c385039ca/Untitled.png)
+![image](https://github.com/solfany/solfany.github.io/assets/123814718/1a490dd9-53ff-423c-889c-58d58269d53b)
 
 압축 해제시 위의 아이콘이 나오게 되는데 해당 아이콘을 클릭하면
 
@@ -28,7 +28,7 @@ toc_icon: "bars"
 
 ## 데모 시험 준비
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c0665560-66a4-4be6-9da0-bafae87164d4/Untitled.png)
+![image](https://github.com/solfany/solfany.github.io/assets/123814718/6955feac-992f-4d47-a96b-52ab1ca0badf)
 
 하단의 다음 버튼을 눌러 다음 단계로 이동 후 문제 풀이 가능 !
 
