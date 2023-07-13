@@ -1,5 +1,5 @@
 ---
-title: "[Spring] 개발 환경 세팅"
+title: "[Spring MVC] 개발 환경 세팅"
 categories:
   - Spring
 tags: [Spring]

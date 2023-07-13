@@ -1,5 +1,5 @@
 ---
-title: "[Spring]oop 5대 설계원칙 "
+title: "[Spring MVC]oop 5대 설계원칙 "
 categories:
   - Spring
 tags: [Spring]

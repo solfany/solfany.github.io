@@ -1,5 +1,5 @@
 ---
-title: "[Spring]HTTP와 HttpServletRequest  "
+title: "[Spring MVC]HTTP와 HttpServletRequest  "
 categories:
   - Spring
 tags: [Spring, HTTP, AWS]

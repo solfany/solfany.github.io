@@ -1,5 +1,5 @@
 ---
-title: "[Java]서블릿 과 JSP"
+title: "[Spring MVC]서블릿 과 JSP"
 categories:
   - Spring
 tags: [Java]
@@ -22,7 +22,6 @@ comments: true
 - 스프링 서버 개발자 입장에서는 시작점과 끝점으로 보이지만, 사실 스프링이 사용자의 요청 (Request)과 응답 (Response)을 처리해 주고 있다.
 
 ![image](https://github.com/solfany/solfany.github.io/assets/123814718/ecda9862-ec44-476e-845e-753cafeeee6b)
-
 
 ## 서블릿의 생명 주기
 
@@ -74,8 +73,6 @@ init 은 처음 한번만 호출이 되고, 다음으로
 서블릿이 메모리에서 내려올 때 리로딩 되거나 웹 어플리케이션이 종료될 때 호출이 된다.
 
 ![image](https://github.com/solfany/solfany.github.io/assets/123814718/a5e05738-9bc8-446f-aa0b-a077e678dd9b)
-
-
 
 위의 코드를 실행시켜보면 서버에는 아무것도 뜨지 않지만 콘솔창에 정상적으로 값이 나온 걸 확인 할 수있다.
 

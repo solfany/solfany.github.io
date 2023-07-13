@@ -1,5 +1,5 @@
 ---
-title: "[Spring]원격 프로그램 실행 RequestMapping "
+title: "[Spring MVC]원격 프로그램 실행 RequestMapping "
 categories:
   - Spring
 tags: [Spring, Fastcampus]

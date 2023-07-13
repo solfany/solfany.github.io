@@ -1,5 +1,5 @@
 ---
-title: "[Spring]동적 리소스, 정적 리소스 RequesstMapping "
+title: "[Spring MVC]동적 리소스, 정적 리소스 RequesstMapping "
 categories:
   - Spring
 tags: [Spring, Fastcampus]
