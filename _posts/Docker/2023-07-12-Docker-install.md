@@ -1,5 +1,5 @@
 ---
-title: "[Docker] 도커 란?"
+title: "[Docker] 도커 설치하기"
 categories:
   - Docker
 tags: [Docker]

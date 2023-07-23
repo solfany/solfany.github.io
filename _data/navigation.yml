@@ -58,6 +58,9 @@ sidebar-category:
       - title: "📁Linux"
         url: "/Linux"
         category: "Linux"
+      - title: "📁Data analytics"
+        url: "/Data"
+        category: "Data"
 
   - title: "💻CODING TEST"
     children:
