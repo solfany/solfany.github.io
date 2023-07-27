@@ -25,6 +25,9 @@ sidebar-category:
       - title: "📁Spring"
         url: "/Spring"
         category: "Spring"
+      - title: "📁R"
+        url: "/R"
+        category: "R"
 
   - title: "💻DATABASE"
     children:
