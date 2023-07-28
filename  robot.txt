@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://solfany.github.io/sitemap.xm
