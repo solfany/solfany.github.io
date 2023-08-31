@@ -1,5 +1,5 @@
 ---
-title: "[Spring Boot] JPA 영속성 "
+title: "[Spring Boot] 트랜잭션 "
 categories:
   - Spring
 tags: [Java, Spring]
