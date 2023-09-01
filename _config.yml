@@ -12,13 +12,13 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "air" # "green" "air", "aqua", "contrast", "dark", "dirt"(커스텀), "neon", "mint(커스텀)", "plum", "sunrise", "default"
+minimal_mistakes_skin: "default" # "green" "air", "aqua", "contrast", "dark", "dirt"(커스텀), "neon", "mint(커스텀)", "plum", "sunrise", "default"
 
 # Site Settings
 locale: "en-US"
 title: "개발 공부 기록"
 title_separator: "-"
-subtitle: "뚬칫 뚬칫"
+subtitle: "sofany"
 name: "fany"
 # description              : ""
 url: "https://solfany.github.io"
