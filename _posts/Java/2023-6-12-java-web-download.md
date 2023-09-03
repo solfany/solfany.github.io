@@ -127,8 +127,8 @@ try (InputStream in = url.openStream();
 
 ## 콘솔 출력 결과
 
-![스크린샷 2023-06-21 오전 11.04.49.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0a9e8be-a727-435b-bd14-27b7669bd498/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-06-21_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.04.49.png)
+![image](https://github.com/solfany/portfolio/assets/123814718/02a595f0-3fee-4f5b-8bb8-c640a1aaf304)
 
 ## 다운 받은 이미지
 
-![스크린샷 2023-06-21 오전 11.15.55.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6f1190e7-7aec-4cd3-9135-2aa736ba0625/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-06-21_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_11.15.55.png)
+![image](https://github.com/solfany/portfolio/assets/123814718/8d1ec805-a5fc-41c3-a871-90324957f6a8)
