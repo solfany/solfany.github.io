@@ -1,303 +1,131 @@
 ---
-title: "[Spring Boot]어노테이션(Annotation)이란?"
+title: "[Spring Boot] OSIV 이란?"
 categories:
   - Spring
-tags: [Java, Spring, Annotation]
+tags: [Java, Spring, OSIV]
 toc_sticky: true
 toc_label: "목록"
+toc_icon: "bars"
 toc_icon: "bars"
 comments: true
 ---
 
 ![Untitled](https://tecoble.techcourse.co.kr/static/f11e41fcb46e962e898e8816ba02d5f5/6050d/spring.png)
 
-### **1. 어노테이션(Annotation)이란?**
+# OSIV(Open Session In View)
 
-- **자바 소스 코드에 추가하여 사용할 수 있는 메타데이터의 일종.**
-- 보통 @ 기호를 앞에 붙여서 사용.(컴파일러는 컴파일 시 @문자로 시작이 되면 어노테이션으로 판단하여 진행)
-- JDK 1.5 버전 이상부터 사용 가능.
+##
 
-```java
-//	Example@RequiredArgsConstructor
-@GetMapping
-@Entity
-	...
+OSIV(Open Session In View)는 영속성 컨텍스트를 뷰까지 열어두는 기능이다. 영속성 컨텍스트가 유지되면 엔티티도 영속 상태로 유지된다. 뷰까지 영속성 컨텍스트가 살아있다면 뷰에서도 지연 로딩을 사용할 수가 있다.
+
+! JPA에서는 OEIV(Open EntityManager In View), 하이버네이트에선 OSIV(Open Session In View)라고 한다. 하지만 관례상 둘 다 OSIV로 부른다.
+
+---
+
+## OSIV 동작 원리
+
+OSIV의 동작 방식에 대해서 Spring Framework가 제공하는 OSIV을 통해 알아보겠다.
+
+스프링이 제공하는 OSIV 클래스는 서블릿 필터에서 적용할지 스프링 인터셉터에서 적용할지에 따라 원하는 클래스를 선택해서 사용하면 된다.
+
+- JPA OEIV 서블릿 필터: [org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter](https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/orm/jpa/support/OpenEntityManagerInViewFilter.html)
+- JPA OEIV 스프링 인터셉터: [org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor](https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/orm/jpa/support/OpenEntityManagerInViewInterceptor.html)
+
+스프링 프레임워크가 제공하는 OSIV는 **비즈니스 계층에서 트랜잭션을 사용하는 OSIV**다.
+
+영속성 컨텍스트는 사용자의 요청 시점에서 생성이 되지만, 데이터를 쓰거나 수정할 수 있는 트랜잭션은 비즈니스 계층에서만 사용할 수 있도록 트랜잭션이 일어난다.
+
+!https://blog.kakaocdn.net/dn/bd835C/btqTPzbjhqa/APhn7gWwr4pRhzCL79N4q1/img.png
+
+스프링 OSIV - 비즈니스 계층 트랜잭션
+
+- spring.jpa.open-in-view : true 기본값
+
+Spring Boot JPA 의존성을 주입 받아 어플리케이션을 구성할 경우 spring.jpa.open-in-view의 기본값인 true로 지정되어 있어 OSIV가 적용된 상태로 어플리케이션이 구성된다.
+
+동작 원리는 다음과 같다.
+
+- 클라이언트의 요청이 들어오면 서블릿 필터나, 스프링 인터셉터에서 영속성 컨텍스트를 생성한다. 단 이 시점에서 트랜잭션은 시작하지 않는다.
+- 서비스 계층에서 @Transeactional로 트랜잭션을 시작할 때 1번에서 미리 생성해둔 영속성 컨텍스트를 찾아와서 트랜잭션을 시작한다.
+- 서비스 계층이 끝나면 트랜잭션을 커밋하고 영속성 컨텍스트를 플러시한다. 이 시점에 트랜잭션은 끝내지만 영속성 컨텍스트는 종료되지 않는다.
+- 컨트롤러와 뷰까지 영속성 컨텍스트가 유지되므로 조회한 엔티티는 영속 상태를 유지한다.
+- 서블릿 필터나, 스프링 인터셉터로 요청이 돌아오면 영속성 컨텍스트를 종료한다. 이때 플러시를 호출하지 않고 바로 종료한다.
+
+서비스 계층에서 트랜잭션이 끝나면 컨트롤러와 뷰에는 트랜잭션이 유지되지 않는 상태이다. 엔티티를 변경하지 않고 단순히 조회만 할 때는 트랜잭션이 없어도 동작하는데, 이것을 트랜잭션 없이 읽기(Nontransactional reads)라 한다. 하여 만약 프록시를 뷰 렌더링하는 과정에 초기화(Lazy loading)가 일어나게 되어도 조회 기능이므로 트랜잭션이 없이 읽기가 가능하다.
+
+- 영속성 컨텍스트는 기본적으로 트랜잭션 범위 안에서 엔티티를 조회하고 수정할 수 있다.
+- 영속성 컨텍스트는 트랜잭션 범위 밖에서 엔티티를 조회만 할 수 있다. 이것을 트랜잭션 없이 읽기(Nontransactional reads)라 한다.
+
+만약 트랜잭션 범위 밖인 컨트롤러와 뷰에서 엔티티를 수정하여도 영속성 컨텍스트의 변경 감지에 의한 데이터 수정이 다음 2가지 이유로 동작하지 않는다.
+
+- 영속성 컨텍스트의 변경 내용을 데이터베이스에 반영하려면 영속성 컨텍스트를 플러시(flush)해야 한다. 스프링이 제공하는 OSIV는 요청이 끝나면 플러시를 호출하지 않고 em.close()로 영속성 컨텍스트만 종료시켜 버린다.
+- 프레젠테이션 계층에서 em.flush()를 호출하여 강제로 플러시해도 트랜잭션 범위 밖이므로 데이터를 수정할 수 없다는 예외가 일어난다.→ javax.persistence.TransactionRequiredException
+
+---
+
+## OSIV 사용시 주의점
+
+```
+2021-01-18 21:54:44.750  WARN 36808 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 ```
 
-- 클래스, 인터페이스, 메소드, 메소드 파라미터, 필드, 지역 변수 위에 작성하여 사용.
-- 값을 저장할 수 있는 엘레먼트를 가지고, 어노테이션 이름 다음에 괄호 안에 엘레먼트를 정의.
+spring.jpa.open-in-view의 값을 기본값(true)으로 어플리케이션을 구동하면, 어플리케이션 시작 시점에 위와 같은 warn 로그를 남기게 된다.
 
-```java
-@Entity(name = "MEMBER_TABLE")
-```
+그런데 위 동작 방식처럼 프록시를 초기화하는 작업을 Service 계층에서 끝내지 않고도 렌더링 시 자동으로 해결하게 해주는 장점이 있는 OSIV전략에 왜 경고를 줄까?
 
-### **1-1. 어노테이션의 용도**
+OSIV 전략은 트랜잭션 시작처럼 최초 데이터베이스 커넥션 시작 시점부터 API 응답이 끝날 때 까지 영속성 컨텍스트와 데이터베이스 커넥션을 유지한다. 그래서 View Template이나 API 컨트롤러에서 지연 로딩이 가능하다.
 
-- 컴파일러에게 코드 작성 문법 에러를 체크하도록 정보를 제공.
-- 소프트웨어 개발툴이 빌드나 배치 시 코드를 자동으로 생성할 수 있도록 정보 제공.
-- 실행 시(런타임 시) 특정 기능을 실행하도록 정보를 제공.
+지연 로딩은 영속성 컨텍스트가 살아있어야 가능하고, 영속성 컨텍스트는 기본적으로 데이터베이스 커넥션을 유지한다. 이것 자체가 큰 장점이다.
 
-### **2. 어노테이션 사용 순서**
+그런데 이 전략은 너무 오랜시간동안 데이터베이스 커넥션 리소스를 사용하기 때문에, 실시간 트래픽이 중요한 애플리케이션에서는 커넥션이 모자랄 수 있다. 이것은 결국 장애로 이어진다.
 
-1. 어노테이션 정의
-2. 어노테이션 배치
+예를 들어서 컨트롤러에서 외부 API를 호출하면 외부 API 대기 시간 만큼 커넥션 리소스를 반환하지 못하고, 유지해야 한다.
 
-### **2-1. 어노테이션 정의**
+→ OISV의 치명적인 단점, 커넥션을 영속성 컨텍스트가 종료될 때까지 1:1로 계속 물고 있음
 
-- 어노테이션을 적용할 때는 어노테이션이 어디(클래스, 메소드, 파라미터 등)에 적용되며, 언제까지 어노테이션 소스가 유지될 것인지를 설정해야 한다.
-- 아래와 같이 어노테이션을 정의 할 수 있다.
+**OSIV OFF**
 
-```java
-@Target({ElementType.[적용대상]})//  클래스, 파라미터, 메소드 등@Retention(RetentionPolicy.[정보유지되는 대상])//  런타임, 클래스, 소스public @interface [어노테이션명]{
-    public 타입 elementName() [default 값]
-    	...
-}
-```
+![image](https://github.com/solfany/portfolio/assets/123814718/8eaef14c-e427-4463-907a-5e48944ff4db)
 
-- 예를 들어보자면, 우리가 자주 사용하는 룸북에서 제공하는 생성자 관련 어노테이션을 볼 수 있다.
+스프링 OSIV Off
 
-```java
-@Target(ElementType.TYPE)
-@Retention(RetentionPolicy.SOURCE)
-public @interface RequiredArgsConstructor {
-	....
-}
-```
+- spring.jpa.open-in-view: false (OSIV 종료)
 
-- @Target 에는 어느 위치(클래스, 파라미터, 메소드 등)에 어노테이션을 적용할지 작성한다.
-- @Retention 에는 언제까지 어노테이션을 유지할 것인지 작성한다.
+OSIV를 끄면 트랜잭션을 종료할 때 영속성 컨텍스트를 닫고, 데이터베이스 커넥션도 반환한다. 따라서 커넥션 리소스를 낭비하지 않는다.
 
-> @Retention 어노테이션은 보통 Runtime 을 많이 사용하고 있어, 어노테이션을 확인하다 보면 Retention 값이 RUNTIME 으로 되어 있는 것을 확인할 수 있다.
+OSIV를 끄면 모든 지연로딩을 트랜잭션 안에서 처리해야 한다. 따라서 지금까지 작성한 많은 지연 로딩 코드를 트랜잭션 안으로 넣어야 하는 단점이 있다. 그리고 view template에서 지연로딩이 동작하지 않는다.
 
-### **2-2. 어노테이션 배치.**
+결론적으로 트랜잭션이 끝나기 전에 지연 로딩을 강제로 호출해 두어야 한다.
 
-- 어노테이션의 사용은 클래스를 참고하는 소스의 흐름상에서 Reflection 을 사용하는 방법을 통해 활용한다.
-- 해당 내용을 이해하기 위해 간단하게 예제를 작성해서 확인해보고자 한다.
-- 추가로 코드가 실행되는 중 Reflection(리플렉션)을 이용하여 추가 정보를 통해 기능 동작도 확인한다.
+**커멘드와 쿼리 분리**
 
-> Reflection(리플렉션)???
+실무에서 OSIV를 끈 상태로 복잡성을 관리하는 좋은 방법이 있다. 바로 Command와 Query를 분리하는것이다.
 
-- JaewonAnnotation.java (어노테이션)
+보통 비즈니스 로직은 특정 엔티티 몇 개를 등록하거나 수정하는 것이므로 성능이 크게 문제가 되지 않는다. 그런데 복잡한 화면을 출력하기 위한 쿼리는 화면에 맞추어 성능을 최적화 하는 것이 중요하다. 하지만 그 복잡성에 비해 핵심 비즈니스에 큰 영향을 주는 것은 아니다.
 
-```java
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+그래서 크고 복잡한 애플리케이션을 개발한다면, 이 둘의 관심사를 명확하게 분리하는 선택은 유지보수 관점에서 충분히 의미 있다.
 
-@Target({ElementType.METHOD})
-@Retention(RetentionPolicy.RUNTIME)
-public @interface JaewonAnnotation {
-    String value() default "-";
-    String str() default "Test Jaewon Annotation :)";
-}
-```
+단순하게 설명해서 다음처럼 분리하는 것이다.
 
-- TestAnnotationService.java (어노테이션을 사용하고자 하는 클래스)
+OrderService
 
-```java
+- OrderService: 핵심 비즈니스 로직
+- OrderQueryService: 화면이나 API에 맞춘 서비스 (주로 읽기 전용 트랜잭션 사용)
 
-public class TestAnnotationService {
-    @JaewonAnnotation
-    public void test1() {
-        System.out.println("테스트1");
-    }
+보통 서비스 계층에서 트랜잭션을 유지한다. 두 서비스 모두 트랜잭션을 유지하면서 지연 로딩을 사용할 수있다.
 
-    @JaewonAnnotation("***")
-    public void test2() {
-        System.out.println("테스트2");
-    }
+---
 
-    @JaewonAnnotation(value = "Test", str = "JaewonAnnotaion 테스트 입니다!!!")
-    public void test3() {
-        System.out.println("테스트3");
-    }
-}
-```
+## OSIV 정리
 
-- TestMain.java (TestAnnotationService.java 를 사용하는 클래스)
+**특징**
 
-```java
+- OSIV는 클라이언트 요청이 들어올 때 영속성 컨텍스트를 생성해서 요청이 끝날 때까지 같은 영속성 컨텍스를 유지한다. 하여 한 번 조회된 엔티티는 요청이 끝날 때까지 영속 상태를 유지한다.
+- 엔티티 수정은 트랜잭션이 있는 계층에서만 동작한다. 트랜잭션이 없는 프레젠테이션 계층은 지연 로딩을 포함해 조회만 할 수 있다.
 
-import java.lang.reflect.Method;
+**단점**
 
-public class TestMain {
-
-    public static void main(String[] args){
-
-        Method[] methodList = TestAnnotationService.class.getMethods();
-
-        for(Method method : methodList) {
-//  어노테이션 적용 여부 확인if(method.isAnnotationPresent(JaewonAnnotation.class)) {
-                System.out.println("Method Name : " + method.getName());
-                JaewonAnnotation annotation=method.getDeclaredAnnotation(JaewonAnnotation.class);
-
-                String value = annotation.value();
-                String str = annotation.str();
-                System.out.println("Value : " + value);
-                System.out.println("Str : " + str);
-            }
-        }
-    }
-}
-```
-
-- TestMain 을 실행하게 되면 결과는 아래와 같다.
-
-```java
-
-Method Name : test1
-Value : -
-Str : Test Jaewon Annotation :)
-Method Name : test2
-Value : ***
-Str : Test Jaewon Annotation :)
-Method Name : test3
-Value : Test
-Str : JaewonAnnotaion 테스트 입니다!!!
-```
-
-### **3. 어노테이션의 종류**
-
-- 어노테이션에도 종류가 존재한다.
-- 표준(내장) 어노테이션 : 자바가 기본적으로 제공하는 어노테이션
-- 메타 어노테이션 : 어노테이션을 위한 어노테이션
-- 사용자 정의 어노테이션 : 사용자가 직접 정의(생성)하는 어노테이션
-
-### **3-1. 표준(내장) 어노테이션**
-
-- 7개의 표준 어노테이션 중에 3개가 java.lang 의 일부이고, 나머지 4개는 java.lang.annotation 으로부터 가져온다.
-- @Override오버라이딩을 올바르게 했는지 컴파일러가 체크.Override 는 오버라이딩 시, 메서드의 이름을 잘못되었는지 확인한다.
-
-```java
-
-      <java />
-
-//	부모 클래스class Parent {
-    void parentMethod(){}
-}
-
-//	자식 클래스(부모 클래스 상속)class Child extends Parent {
-    @Override
-    void parentMethodTest(){}//	컴파일 에러 발생! 오버라이드 메소드명이 틀림
-}
-```
-
-- @Deprecated앞으로 없어지거나, 사용하지 않을 것을 권장하는 필드나 메서드에 사용.StringUtils.~~isEmpty~~() 과 같이 밑줄이 그어져 있지만, 사용은 가능한 것을 종종 확인할 수 있다.
-
-> 그러나 나중에 버전업시 어느 순간 메소드가 사라져 있을 수 있다.
-
-```java
-
-      <java />
-
-@Deprecated
-public static boolean isEmpty(@Nullable Object str) {
-    return (str == null || "".equals(str));
-}
-```
-
-- @FunctionalInterfaceJava 8 부터 지원하는, 함수형 인터페이스를 지정하는 어노테이션.함수형 인터페이스의 하나의 추상 메서드만 가져야 한다는 제약을 확인.메서드가 존재하지 않거나, 1개 이상의 메서드(default 메서드 제외) 가 존재할 경우 컴파일 오류를 발생.
-- @SuppressWarnings선언한 곳의 컴파일 경고를 무시하도록 하는 어노테이션.
-
-```java
-
-      <java />
-
-@SuppressWarnings("unchecked")
-ArrayList list = new ArrayList();// 제네릭 타입을 지정하지 않음
-list.add(obj);// 경고 발생 !!!(UnChecked)
-```
-
-### **3-2. 메타 어노테이션**
-
-- @Target@Target 에는 어느 위치(클래스, 파라미터, 메소드 등)에 어노테이션을 적용할지 작성한다.
-
-| ElementType 열거 상수 | 적용 대상                     |
-| --------------------- | ----------------------------- |
-| TYPE                  | 클래스, 인터페이스, 열거 타입 |
-| ANNOTATION_TYPE       | 어노테이션                    |
-| FIELD                 | 필드                          |
-| CONSTRUCTOR           | 생성자                        |
-| PARAMETER             | 파라미터                      |
-| METHOD                | 메소드                        |
-| LOCAL_VARIAblE        | 로컬 변수(지역 변수)          |
-| PACKAGE               | 패키지                        |
-
-- @Retention@Retention 에는 언제까지 어노테이션을 유지할 것인지 작성한다.
-
-| RetentionPolicy 열거 상수 | 설명                                                                                                                             |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| RUNTIME                   | 바이트 코드 파일(컴파일/빌드파일)까지 어노테이션 정보를 유지하여,  리플렉션을 이용해서, 런타임에 어노테이션 정보를 얻을 수 있다. |
-| CLASS                     | 바이트 코드 파일까지 어노테이션 정보를 유지하지만, 리플렉션을 이용해서  런타임에 어노테이션 정보를 얻을 수 없다.                 |
-| SOURCE                    | 소스상에서만 어노테이션 정보를 유지한다.  소스코드를 확인할 때만 의미가 있고, 바이트 코드 파일에는 정보가 남지 않는다.           |
-
-- @Documented해당 어노테이션을 JavaDoc 에 포함시킨다.
-- @Inherited어노테이션도 상속이 가능하다.어노테이션을 자식 클래스에 상속하고자 할 때 해당 어노테이션을 작성한다.
-
-```java
-
-      <java />
-
-@Inherited
-@interface SuperAnno{}
-
-@SuperAnno
-class Parent{}
-
-//	SuperAnno 가 붙은 것으로 인식class Child extends Parent{}
-```
-
-- @RepeatableJava 8 부터 지원하고, 연속적으로 어노테이션을 선언할 수 있게 한다.
-
-### **3-3. 사용자 정의 어노테이션**
-
-- 위 2번 항목에서 예제로 생서안 것을 참고하면 된다.
-
-### **4. 어노테이션 요소 특징**
-
-- 적용시 값을 지정하지 않으면, 사용될 수 있는 기본값을 지정할 수 있다.
-- 요소가 하나이고 이름이 value 라면 어노테이션 작성 시 요소의 이름은 생략이 가능하다.
-
-```java
-
-      <java />
-
-//	요소가 생략되면 default 값@JaewonAnnotation
-public void test1() {
-}
-
-//	요소가 하나이고 이름이 value 라면 이름 생략 가능@JaewonAnnotation("***")
-public void test2() {
-}
-
-//	요소가 하나가 아니면 이름 생략 불가능@JaewonAnnotation(value = "Test", str = "JaewonAnnotaion 테스트 입니다!!!")
-public void test3() {
-}
-```
-
-- 요소의 타입이 배열인 경우 중괄호{} 를 사용해야 한다.
-
-```java
-
-      <java />
-
-@interface TestAnnotation{
-	String[] strArr();
-}
-
-//	요소가 배열이면 중괄호를 통해 선언한다.@TestAnnotation(strArr={"Test", "Annotation"})
-
-//	요소가 1개일 때는 {}를 사용하지 않아도 된다.@TestAnnotation(strArr="Hello Annotation")
-
-//	요소가 없으면 {}를 써넣어야 한다.@TestAnnotation(strArr={})
-```
-
-### **5. 어노테이션 규칙**
-
-- 어노테이션에서도 지켜야하는 규칙이 있다.
-
-1. 요소의 타입은 기본형, String, Enum, 어노테이션, Class 만 허용
-2. 괄호() 안에 매개변수를 선언할 수 없다.
-3. 예외를 선언 할 수 없다.
-4. 요소의 타입을 매개변수로 정의할 수 없다.(<T>)
+- 영속성 컨텍스트와 DB 커넥션은 1:1로 물고있는 관계이기 때문에 프레젠테이션 로직까지 DB 커넥션 자원을 낭비하게 됨.
+- OSIV를 적용하면 같은 영속성 컨텍스트를 여러 트랜잭션이 공유하게될 수도 있다.
+- 프레젠테이션에서 엔티티를 수정하고 비즈니스 로직을 수행하면 엔티티가 수정될 수 있다.
+- 프레젠테이션 계층에서 렌더링 과정에서 지연 로딩에 의해 SQL이 실행된다. 따라서 성능 튜닝시에 확인해야 할 부분이 넓어진다.
