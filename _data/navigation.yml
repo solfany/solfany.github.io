@@ -9,6 +9,8 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+sidebar-category:
   - title: "💻PROJECT REVIEW"
     children:
       - title: "📁ERP project"
@@ -18,7 +20,6 @@ main:
         url: "/Board"
         category: "Board"
 
-sidebar-category:
   - title: "💻PROGRAMMING"
     children:
       - title: "📁JavaScript"
