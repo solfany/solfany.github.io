@@ -43,9 +43,9 @@ sidebar-category:
       - title: "📁Oracle"
         url: "/Oracle"
         category: "Oracle"
-      - title: "📁Mysql"
-        url: "/Mysql"
-        category: "Mysql"
+      - title: "📁Sql"
+        url: "/Sql"
+        category: "Sql"
 
   - title: "💻SERVER"
     children:
