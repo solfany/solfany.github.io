@@ -1,0 +1,8 @@
+# Operating period based on the first and last published posts.
+started_on: "2023-04-06"
+ended_on: "2023-11-28"
+destinations:
+  - label: "blog.solfany.com"
+    url: "https://blog.solfany.com/"
+  - label: "solfany.tistory.com"
+    url: "https://solfany.tistory.com/"

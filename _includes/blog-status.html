@@ -1,0 +1,11 @@
+<div class="blog-status">
+  {% if site.data.blog.started_on and site.data.blog.ended_on %}
+    <p>운영 기간 <span>{{ site.data.blog.started_on | date: "%Y년 %-m월 %-d일" }} — {{ site.data.blog.ended_on | date: "%Y년 %-m월 %-d일" }}</span></p>
+  {% endif %}
+  <p>블로그를 아래 주소로 이전했습니다.</p>
+  <div class="blog-status__links">
+    {% for destination in site.data.blog.destinations %}
+      <a href="{{ destination.url }}">{{ destination.label }} <span aria-hidden="true">↗</span></a>
+    {% endfor %}
+  </div>
+</div>

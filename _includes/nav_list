@@ -4,8 +4,8 @@
 <nav class="nav__list">
   {% if page.sidebar.title %}<h3 class="nav__title" style="padding-left: 0;">{{ page.sidebar.title }}</h3>{% endif %}
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
-  <li> 전체 글 수 ({{sum}})개 </li>
+  <label for="ac-toc">주제별 기록 보기</label>
+  <p class="nav__overview"><a href="{{ '/categories/' | relative_url }}">모든 기록 <span>{{ sum }}</span></a></p>
   <ul class="nav__items">
     {% for nav in navigation %}
       
@@ -32,7 +32,7 @@
             {% endif %}
           {% endfor %}
 
-            <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }}({{ post_cnt }})</a></li>
+            <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active" aria-current="page"{% endif %}><span>{{ child.title }}</span><span class="nav__count">{{ post_cnt }}</span></a></li>
           {% endfor %}
         </ul>
         {% endif %}

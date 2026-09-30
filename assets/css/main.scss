@@ -5,6 +5,18 @@ search: false
 
 @charset "utf-8";
 
+$sans-serif: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", sans-serif;
+$background-color: #ffffff;
+$text-color: #242424;
+$muted-text-color: #757575;
+$primary-color: #333333;
+$link-color: #333333;
+$border-color: #eaeaea;
+$footer-background-color: #ffffff;
+$max-width: 1240px;
+$right-sidebar-width: 240px;
+$right-sidebar-width-narrow: 220px;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import "blog-design";

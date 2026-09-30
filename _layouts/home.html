@@ -4,7 +4,18 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<header class="archive-intro">
+  <img class="archive-intro__portrait" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}의 프로필 사진" width="72" height="72">
+  <div>
+    <h1>솔비의 개발 기록</h1>
+    <p>이곳은 이전 블로그의 기록을 보관하는 공간입니다.</p>
+  </div>
+</header>
+{% include blog-status.html %}
+<div class="blog-section-heading">
+  <h2>기록</h2>
+  <span>{{ site.posts.size }}개</span>
+</div>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}

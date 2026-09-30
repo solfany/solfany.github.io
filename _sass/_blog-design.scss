@@ -1,0 +1,73 @@
+/* A quiet, single-column archive. */
+html { font-size: 16px; }
+body { line-height: 1.75; -webkit-font-smoothing: antialiased; }
+::selection { background: #e9e9e9; color: #242424; }
+a { text-underline-offset: 4px; }
+a:focus-visible, button:focus-visible { outline: 2px solid #555; outline-offset: 5px; }
+.masthead { background: #fff; border: 0; }
+.masthead__inner-wrap { max-width: 856px; padding: 30px 28px; }
+.greedy-nav { background: transparent; }
+.greedy-nav .site-title { font-size: 18px; font-weight: 650; letter-spacing: -.4px; color: #242424; }
+.greedy-nav .visible-links a { font-size: 13px; color: #757575; }
+.greedy-nav .visible-links a::before { height: 1px; background: #242424; }
+#main { max-width: 856px; padding: 42px 28px 64px; animation: none; }
+.archive, .page { float: none; width: 100%; padding: 0; margin: 0; }
+.archive-intro { display: flex; gap: 22px; align-items: center; margin-bottom: 28px; }
+.archive-intro__portrait { width: 72px; height: 72px; object-fit: cover; object-position: 50% 35%; border-radius: 50%; flex-shrink: 0; }
+.archive-intro h1 { margin: 0 0 6px; font-size: 25px; font-weight: 650; line-height: 1.45; letter-spacing: -.8px; }
+.archive-intro p { margin: 0; font-size: 13px; color: #757575; }
+.blog-status { padding-bottom: 32px; margin-bottom: 40px; border-bottom: 1px solid #eaeaea; font-size: 12px; color: #757575; }
+.blog-status p { margin: 4px 0; }
+.blog-status p span { margin-left: 12px; color: #555; font-variant-numeric: tabular-nums; }
+.blog-status__links { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.blog-status a { display: inline-block; margin-top: 8px; font-size: 13px; color: #242424; }
+.blog-section-heading { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.blog-section-heading h2 { margin: 0; font-size: 14px; font-weight: 600; }
+.blog-section-heading > span { font-size: 12px; color: #757575; }
+.list__item .archive__item { padding: 20px 0; border-bottom: 1px solid #f0f0f0; }
+.post-card__meta { display: flex; gap: 12px; align-items: center; color: #757575; font-size: 11px; line-height: 1.5; }
+.post-card__category { font-weight: 500; }
+.post-card__meta time { font-variant-numeric: tabular-nums; }
+.archive__item-title { margin: 7px 0 0; font-size: 17px; line-height: 1.6; letter-spacing: -.3px; overflow-wrap: anywhere; }
+.archive__item-title a { color: #242424; text-decoration: none; }
+.archive__item-title a:hover { text-decoration: underline; }
+.grid__item .archive__item-title { font-size: 15px; }
+.archive__subtitle { margin-top: 36px; font-size: 16px; }
+.page__title { font-size: 30px; line-height: 1.5; letter-spacing: -.8px; }
+.page__content { font-size: 16px; line-height: 1.9; overflow-wrap: break-word; }
+.page__content h2 { margin-top: 2.5em; padding-bottom: 12px; }
+.page__content p, .page__content li { font-size: 1em; }
+.page__content pre { border-radius: 4px; }
+.sidebar__right, .sidebar__right.sticky { float: none; position: static; width: 100%; margin: 24px 0 32px; padding: 0; }
+.toc { border: 1px solid #eaeaea; border-radius: 4px; box-shadow: none; }
+.toc .nav__title { color: #555; background: #fafafa; }
+.toc__menu { font-size: 12px; }
+.toc__menu a { font-weight: 400; }
+.toc .toc__menu { max-height: none; }
+.breadcrumbs { max-width: 856px; padding: 0 28px; font-size: 11px; }
+.pagination { margin-top: 28px; font-size: 12px; }
+.pagination li a { border: 0; border-radius: 3px; margin: 0 2px; }
+.pagination li a.current { background: #f3f3f3; color: #242424; }
+.page__footer { background: #fff; border: 0; color: #888; }
+.page__footer footer { max-width: 856px; padding: 0 28px 28px; margin-top: 0; }
+.archive-footer { display: flex; justify-content: space-between; padding-top: 20px; border-top: 1px solid #eaeaea; font-size: 11px; }
+.archive-footer a { color: #555; text-decoration: none; }
+.search-content { max-width: 856px; padding: 32px 28px; margin: 0 auto; width: 100%; }
+@media (max-width: 600px) {
+  .masthead__inner-wrap { padding: 22px 22px; }
+  #main { padding: 28px 22px 44px; }
+  .archive-intro { gap: 16px; align-items: flex-start; }
+  .archive-intro__portrait { width: 58px; height: 58px; }
+  .archive-intro h1 { font-size: 21px; }
+  .archive-intro p { font-size: 12px; }
+  .blog-status { margin-bottom: 30px; padding-bottom: 24px; }
+  .blog-status p span { display: block; margin: 4px 0 0; }
+  .archive__item-title { font-size: 16px; }
+  .page__title { font-size: 25px; }
+  .page__footer footer { padding: 0 22px 22px; }
+  .breadcrumbs { padding: 0 22px; }
+}
+*, *::before, *::after { animation: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+}

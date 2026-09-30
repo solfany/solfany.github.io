@@ -1,96 +1,90 @@
-# main links
 main:
-  - title: "About"
-    url: /about/
-  - title: "Tags"
-    url: /tags/
-
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "기록"
+    url: /
+  - title: "주제"
+    url: /categories/
 
 sidebar-category:
-  - title: "💻PROJECT REVIEW"
+  - title: "PROJECT REVIEW"
     children:
-      - title: "📁ERP project"
+      - title: "ERP project"
         url: "/Erp"
         category: "Erp"
-      - title: "📁Board project"
+      - title: "Board project"
         url: "/Board"
         category: "Board"
 
-  - title: "💻PROGRAMMING"
+  - title: "PROGRAMMING"
     children:
-      - title: "📁JavaScript"
+      - title: "JavaScript"
         url: "/JavaScript"
         category: "JavaScript"
-      - title: "📁React"
+      - title: "React"
         url: "/React"
         category: "React"
-      - title: "📁Java"
+      - title: "Java"
         url: "/Java"
         category: "Java"
-      - title: "📁Spring"
+      - title: "Spring"
         url: "/Spring"
         category: "Spring"
-      - title: "📁R"
+      - title: "R"
         url: "/R"
         category: "R"
 
-  - title: "💻DATABASE"
+  - title: "DATABASE"
     children:
-      - title: "📁Oracle"
+      - title: "Oracle"
         url: "/Oracle"
         category: "Oracle"
-      - title: "📁Sql"
+      - title: "SQL"
         url: "/Sql"
-        category: "Sql"
+        category: "SQL"
 
-  - title: "💻SERVER"
+  - title: "SERVER"
     children:
-      - title: "📁AWS"
+      - title: "AWS"
         url: "/Aws"
         category: "Aws"
 
-  - title: "💻COMPUTING PLATFORM"
+  - title: "COMPUTING PLATFORM"
     children:
-      - title: "📁Docker"
+      - title: "Docker"
         url: "/Docker"
         category: "Docker"
 
-  - title: "💻COMPUTER SCIENCE"
+  - title: "COMPUTER SCIENCE"
     children:
-      - title: "📁Software engineering"
+      - title: "Software engineering"
         url: "/Software"
         category: "Software"
-      - title: "📁Network"
+      - title: "Network"
         url: "/Network"
         category: "Network"
-      - title: "📁Linux"
+      - title: "Linux"
         url: "/Linux"
         category: "Linux"
-      - title: "📁Data analytics"
+      - title: "Data analytics"
         url: "/Data"
         category: "Data"
 
-  - title: "💻CODING TEST"
+  - title: "CODING TEST"
     children:
-      - title: "📁Baekjoon"
+      - title: "Baekjoon"
         url: "/Baekjoon"
         category: "Baekjoon"
 
-  - title: "💻ETC"
+  - title: "ETC"
     children:
-      - title: "📁Git & Github"
+      - title: "Git & Github"
         url: "/Github"
         category: "Github"
-      - title: "📁Blog Dev"
+      - title: "Blog Dev"
         url: "/Blog"
         category: "Blog"
-      - title: "📁Code Review"
+      - title: "Code Review"
         url: "/Review"
         category: "Review"
-      - title: "📁Incorrect answer note"
+      - title: "Incorrect answer note"
         url: "/Note"
         category: "Note"
