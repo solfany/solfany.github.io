@@ -3,9 +3,6 @@ title: "[Network] ping, pathping tracert"
 categories:
   - Network
 tags: [Network]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
 
 ```bash

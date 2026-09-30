@@ -1,11 +1,8 @@
 ---
-title: "[Spring MVC]서블릿 과 JSP"
+title: "[Spring MVC] 서블릿 과 JSP"
 categories:
   - Spring
 tags: [Java]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -74,7 +71,7 @@ init 은 처음 한번만 호출이 되고, 다음으로
 
 ![image](https://github.com/solfany/solfany.github.io/assets/123814718/a5e05738-9bc8-446f-aa0b-a077e678dd9b)
 
-위의 코드를 실행시켜보면 서버에는 아무것도 뜨지 않지만 콘솔창에 정상적으로 값이 나온 걸 확인 할 수있다.
+위의 코드를 실행시켜보면 서버에는 아무것도 뜨지 않지만 콘솔창에 정상적으로 값이 나온 걸 확인 할 수 있다.
 
 초기화하고, 실행이 되고 있는 것을 확인 할 수 있다.
 
@@ -88,9 +85,9 @@ init 은 처음 한번만 호출이 되고, 다음으로
 
 Servlet Context 안에는 children 이라는 멤버가 있는데 맵 형태로 등록이 되어있다.
 
-요청이 왔을 때 서블릿 인스턴스가 존재하는지 children에서 확인 후 처리한다ㅏ.
+요청이 왔을 때 서블릿 인스턴스가 존재하는지 children에서 확인 후 처리한다.
 
-또한 서블릿은 싱클톤으로 1개의 인스턴스만 만들어진다. → 1개의 인스턴스만 만들어서 재활용한다.
+또한 서블릿은 싱글톤으로 1개의 인스턴스만 만들어진다. → 1개의 인스턴스만 만들어서 재활용한다.
 
 ## JSP(Java Server Pages)란 ?
 
@@ -108,7 +105,7 @@ html 안에 자바 코드가 있는 것
 
 <% %> - 자바 코드 실행
 
-자버에서 하는 모든 일을 여기서 할 수 있다.
+자바에서 하는 모든 일을 여기서 할 수 있다.
 
 (if문 , for문, while문, switch문 등등 )
 

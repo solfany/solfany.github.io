@@ -3,9 +3,6 @@ title: "[Java] Web Image Download"
 categories:
   - Java
 tags: [Java]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 

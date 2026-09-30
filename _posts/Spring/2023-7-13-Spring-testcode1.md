@@ -1,11 +1,8 @@
 ---
-title: "[Spring MVC]테스트 코드를 작성하는 이유"
+title: "[Spring MVC] 테스트 코드를 작성하는 이유"
 categories:
   - Spring
 tags: [Java]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -22,7 +19,7 @@ comments: true
 
 - 프로덕션 코드보다 테스트 코드를 먼저 작성하는 개발 방법
 - TFD(Test First Development) + 리팩토링
-- 기능 동작을 검증 (메소드 단위)
+- 기능 동작을 검증 (메서드 단위)
 
 ## BDD
 

@@ -3,9 +3,6 @@ title: "[Network] Multiplexing 방법 4가지"
 categories:
   - Network
 tags: [Network]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
 
 > 네 가지 개념 모두 단일 채널을 통해 여러 신호를 전송하는 데 사용된다.
@@ -36,7 +33,7 @@ toc_icon: "bars"
 
 ## FDMA(Frequency Division Multiple Access)
 
-**주파수 분할 다중 엑세스**
+**주파수 분할 다중 액세스**
 
 - 무선 통신 시스템에서 사용되며 사용 가능한 주파수 범위를 여러 채널로나눈다.
   각 채널은 통신세션동안 해당 채널을 독점적으로 사용하는 특정 사용자에게 할당 된다.

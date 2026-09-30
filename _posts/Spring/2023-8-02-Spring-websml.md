@@ -1,11 +1,8 @@
 ---
-title: "[Spring Boot]배포서술자 -web.sml"
+title: "[Spring Boot] 배포서술자 -web.sml"
 categories:
   - Spring
 tags: [Java, Spring]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -45,7 +42,7 @@ WAS 는 규모가 크고 엔터프라이즈 환경에 필요한 트랜잭션, �
 
 5XX : 내부 서버 오류 (톰캣 에러) : 내부 서버 오류 (톰캣 에러)
 
-## 켄텍스트 패스(Context Path)
+## 컨텍스트 패스(Context Path)
 
 서블릿을 요청하기 위한 URL
 

@@ -3,9 +3,6 @@ title: "[Network] 라우터 실습 프로그램 설치해보기"
 categories:
   - Network
 tags: [Network]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
 
 ## 한국정보통신자격 홈페이지 방문

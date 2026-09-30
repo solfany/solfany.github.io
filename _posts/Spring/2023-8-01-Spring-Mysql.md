@@ -1,11 +1,8 @@
 ---
-title: "[Spring Boot]spring boot Mysql 연동하기"
+title: "[Spring Boot] spring boot Mysql 연동하기"
 categories:
   - Spring
 tags: [Java]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -40,7 +37,7 @@ spring:
       ddl-auto: update
 ```
 
-데이터 베이스를 만들고 데이터 베이스를 기반으로 YML 파일을 작성한다.
+데이터베이스를 만들고 데이터베이스를 기반으로 YML 파일을 작성한다.
 
 Entity
 
@@ -92,7 +89,7 @@ select * from member_table;
 위와 같이 비어있는 talble 이 의도한 바와 같이 생성된 것을 확인 할 수 있다.
 
 `url: jdbc:mysql://localhost:3306/logindb?serverTimezone=Asia/Seoul&characterEncoding=UTF-8`
-해당 url 로 데이터 베이스가 자동으로 생성 된다.
+해당 url 로 데이터베이스가 자동으로 생성 된다.
 
 mysql db 생성
 

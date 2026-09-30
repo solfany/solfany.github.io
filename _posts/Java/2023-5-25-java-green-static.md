@@ -1,11 +1,8 @@
 ---
-title: "[Java]Static, Instance"
+title: "[Java] Static, Instance"
 categories:
   - Java
 tags: [Java]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
 
 ![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/3..png?raw=true)
@@ -23,7 +20,7 @@ toc_icon: "bars"
 
 - static은 모든 객체가 메모리를 공유한다.
   - 메인 메서드에서 변화를 주면 모든 객체가 동시에 변한다.
-  - but, lnstance 의 경ㅇ우 새롭게 메모리를 할당하는 독립된 새로운 객체로 인식해야한다. 따라서, lnstance의 변화는 메인 메소드에 국한된다.
+  - but, lnstance 의 경우 새롭게 메모리를 할당하는 독립된 새로운 객체로 인식해야한다. 따라서, lnstance의 변화는 메인 메서드에 국한된다.
 
 # ps
 
@@ -117,13 +114,9 @@ Instance 객체 가운데 메모리에 할당되어 상주하고 있는 실체�
 
 1과 같이 E1, E2, E3 / KHE class 증 어느 하나의 exStatic만 바꿔도 넷의 결과값이 동시에 변한다.
 
-<br>
-
 ---
 
-<br>
-
-# 여러 인스턴스에서 고통으로 사용하는 변수를 선언하자 - static 변수
+# 여러 인스턴스에서 공통으로 사용하는 변수를 선언하자 - static 변수
 
 ## 공통으로 사용하는 변수가 필요한 경우
 
@@ -178,9 +171,6 @@ public class Employee {
 
 }
 ```
-
-<br>
-
 EmployeeTest.java
 
 ```java
@@ -201,20 +191,13 @@ public class EmployeeTest {
 	}
 }
 ```
-
-<br>
-
 ![image](https://github.com/solfany/solfany/assets/123814718/55d0f29f-789e-457d-8a81-7d4d0bb245b4)
 
 인스턴스가 하나의 메모리 공간을 가르킨다.
 
 - static 변수는 인스턴스에서 공통으로 사용하는 영역임음 알 수 있음
 
-<br>
-
 ![image](https://github.com/solfany/solfany/assets/123814718/08384cea-d5c0-492b-898f-53e142a6f527)
-
-<br>
 
 ## 회사원이 입사할 때마다 새로운 사번 부여하기
 
@@ -252,16 +235,11 @@ public class EmployeeTest {
 
 ![image](https://github.com/solfany/solfany/assets/123814718/dc2fff9f-f5ed-4ce0-9793-5f154ec9902a)
 
-<br>
-
 ## static 변수와 메서드는 인스턴스 변수, 메서드가 아니므로 클래스 이름으로 직접 참조
 
 ```java
 System.out.println(Employee.serialNum);
 ```
-
-<br>
-
 # static메서드의 구현과 활용, 변수의 유효 범위
 
 ## static 메서드 만들기
@@ -288,9 +266,6 @@ public static void setSerialNum(int serialNum) {
 ```java
 System.out.println(Employee.getSerialNum());
 ```
-
-<br>
-
 ## static 메서드(클래스 메서드)에서는 인스턴스 변수를 사용할 수 없다
 
 - static 메서드는 인스턴스 생성과 무관하게 클래스 이름으로 호출 될 수 있음
@@ -332,9 +307,6 @@ public class EmployeeTest2 {
 - 클래스 내부의 여러 메서드에서 사용하는 변수는 멤버 변수로 선언하는 것이 좋음
 - 멤버 변수가 너무 많으면 인스턴스 생성 시 쓸데없는 메모리가 할당됨
 - 상황에 적절하게 변수를 사용해야 함
-
-<br>
-<br>
 
 # static 응용 - 싱글톤 패턴(singleton pattern)
 

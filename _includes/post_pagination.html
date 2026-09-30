@@ -16,18 +16,13 @@
   {% endif %}
 {% endfor %}
 
-<!--두 번째 문단-->
 {% if prev_post or next_post %}
-  <nav class="pagination">
+  <nav class="reading-pagination" aria-label="같은 주제의 다른 글">
     {% if prev_post %}
-      <a href="{{ prev_post.url }}" class="pagination--pager">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
-    {% endif %}
+      <a href="{{ prev_post.url | relative_url }}"><span>← 이전 글</span><strong>{{ prev_post.title | escape }}</strong></a>
+    {% else %}<span></span>{% endif %}
     {% if next_post %}
-      <a href="{{ next_post.url }}" class="pagination--pager">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
+      <a class="reading-pagination__next" href="{{ next_post.url | relative_url }}"><span>다음 글 →</span><strong>{{ next_post.title | escape }}</strong></a>
     {% endif %}
   </nav>
 {% endif %}

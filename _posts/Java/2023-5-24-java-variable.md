@@ -3,9 +3,6 @@ title: "[Java] 변수,상수,리터럴"
 categories:
   - Java
 tags: [Java, 자바의 정석]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
 
 ![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/3..png?raw=true)
@@ -182,7 +179,7 @@ public class VarEx1 {
 
 문자열 특징 “ ” **따옴표**로 감싸져 있음
 
-**정수와 실수는 타입이 여러개 이기 때문에 점미사를 이용해 구분한다.**
+**정수와 실수는 타입이 여러 개 이기 때문에 점미사를 이용해 구분한다.**
 
 정수는 접미사 “L”(long 타입)을 사용한다. 그 외는 int 타입을 이용한다.
 

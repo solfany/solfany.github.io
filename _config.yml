@@ -280,8 +280,8 @@ defaults:
       comments: false
       share: false
       related: false
-      toc: true
-      toc_sticky: true
+      toc: false
+      toc_sticky: false
       mathjax: true
       sidebar_main: true
       sidebar: # 추가한 부분

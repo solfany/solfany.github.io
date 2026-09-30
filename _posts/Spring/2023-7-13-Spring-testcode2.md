@@ -1,11 +1,8 @@
 ---
-title: "[Spring MVC]테스트 코드 작성해보기"
+title: "[Spring MVC] 테스트 코드 작성해보기"
 categories:
   - Spring
 tags: [Java]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -125,9 +122,9 @@ public class PasswordValidator {
 }
 ```
 
-> 즉, validate 메소드는 직접 비밀번호를 전달받아 길이를 검사하는 반면,
-> validate2 메소드는 외부에서 비밀번호 생성 정책을 구현한 클래스를 전달받아 해당 정책에 따라 비밀번호를 생성하고 검사한다.
-> 이를 통해 validate2 메소드는 다양한 비밀번호 생성 정책을 지원하며,
+> 즉, validate 메서드는 직접 비밀번호를 전달받아 길이를 검사하는 반면,
+> validate2 메서드는 외부에서 비밀번호 생성 정책을 구현한 클래스를 전달받아 해당 정책에 따라 비밀번호를 생성하고 검사한다.
+> 이를 통해 validate2 메서드는 다양한 비밀번호 생성 정책을 지원하며,
 > PasswordGeneratePolicy 인터페이스를 구현한 클래스를 사용하여 비밀번호를 생성할 수 있다.
 
 ## 랜덤 비밀번호 생성기

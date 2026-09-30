@@ -3,9 +3,6 @@ title: "[Java] 클래스 구성 요소와 생성자"
 categories:
   - Java
 tags: [Java]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -20,9 +17,6 @@ comments: true
    3-1. 외부에 포함된 또 다른 클래스
 
    3-2. public 키워드를 사용할 수 없음
-
-<br>
-<br>
 
 ## 클래스 안에 올 수 있는 4가지
 
@@ -41,17 +35,11 @@ comments: true
 
    4-1. 클래스 내부 정의된 클래스
 
-<br>
-<br>
-
 ## 기본 생성자의 자동 추가
 
 - 생성자 이름하고 똑같다
 - 매개변수 없다
 - 반환형이 없다.
-
-<br>
-<br>
 
 ## 예제
 
@@ -107,9 +95,6 @@ public class DefaultConstructor {
 
 }
 ```
-
-<br>
-
 ## 이슈 사항
 
 **아래의 코드가 오류가 나는 이유를 알아보자 ?**

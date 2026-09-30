@@ -3,9 +3,6 @@ title: "[Network] BitLocker"
 categories:
   - Network
 tags: [Network]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
 
 ![image](https://github.com/solfany/solfany.github.io/assets/123814718/327ad932-cdd8-49f9-a92a-092c67a541f1)

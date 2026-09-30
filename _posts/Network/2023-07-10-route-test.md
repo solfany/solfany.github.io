@@ -3,9 +3,6 @@ title: "[Network] router 시험 데모"
 categories:
   - Network
 tags: [Network]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
 
 Q1 . ROUTER2의 호스트 이름을'ICQA'로 설정하시오.

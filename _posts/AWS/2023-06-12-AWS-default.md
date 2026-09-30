@@ -1,11 +1,8 @@
 ---
-title: "[AWS]AWS, Cloud, cloud computing"
+title: "[AWS] AWS, Cloud, cloud computing"
 categories:
   - Aws
 tags: [AWS, Cloud, computing]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
 
 ![Untitled](https://appmaster.io/cdn-cgi/image/width=1024,quality=83,format=auto/api/_files/ZC5TGYLhKnWGwvWUFtVyk7/download/)
@@ -17,10 +14,10 @@ toc_icon: "bars"
 - 서버, 네트워크 등 인프라 전체를 빌려주는 서비스
 - 다양한 서비스를 제공하고 있어서 AWS가 제공하는 서비스 만으로 필요한 기능을 대부분 구축 가능
 - 대표적인 서비스 : Amazon EC2, Amazon S3
-- 과거에도 서버를 빌려주는 서비스는 있었으나, 는 것과 운영체제나 웹 서버, 데이터베이스 서버 등에 필요한 소프트웨어까지 통째로 사용할 수 있음
+- 서버뿐 아니라 운영체제, 데이터베이스 등 다양한 관리형 서비스도 이용할 수 있음
 - AWS는 여러 사업자에게 각각 빌려야 했던 인프라를 일괄로 빌릴 수 있다
 
-1. AWS에 가입하기 - 최초 가입시 12개월 동안 프리티어 계정(무료계정) 사용가능
+1. AWS에 가입하기 - 무료 사용 조건은 가입 시점과 서비스에 따라 다르므로 공식 안내 확인
 
    https://aws.amazon.com/ko/free
 
@@ -34,11 +31,11 @@ toc_icon: "bars"
 
    Amazon RDS - 관계형 DB 관리 서비스. 관계형 DB(MySQL, Oracle 등)를 모니터링, 주기적 백업
 
-**[참고]** 관련 용어
+**[참고]** 관련 용어
 
-on-Premise : 서버를 직접 운영하는 방식  
- Serverless : 서버 작업을 서버내부가 아닌 클라우드 서비스로 처리  
- Region : 데이터 센터가 물리적으로 존재하는 곳.  
+on-Premise : 서버를 직접 운영하는 방식\
+ Serverless : 서버 작업을 서버내부가 아닌 클라우드 서비스로 처리\
+ Region : 데이터 센터가 물리적으로 존재하는 곳.\
  CDN(Content Delivery Network) : 정적 리소스를 빠르게 제공할 수 있게 전세계의 캐시서버
 
 ### 2. 클라우드란(Cloud)?
@@ -47,17 +44,19 @@ on-Premise : 서버를 직접 운영하는 방식
   각종 인프라와 IT 기술을 빌려주는 서비스
 - 언제, 어디서나 인터넷을 통해서 접속이 가능한 환경 <ex> MS의 office365
 - 클라우드의 세가지 형태
-  ① IaaS(=Infra as a Service, 인프라 서비스) - 클라우드의 가장 기본적인 제공 형태 - 서버, 스토리지, 네트워크 장비, 서버용 운영체제 등을 빌려주는 서비스
+  ① IaaS(=Infra as a Service, 인프라 서비스) - 클라우드의 가장 기본적인 제공 형태 - 서버, 스토리지, 네트워크 장비, 서버용 운영체제 등을 빌려주는 서비스
 
-  ② PaaS(=Platform as a Service, 플랫폼 서비스) - 인프라 서비스에서 한단계 더 발전한 클라우드 서비스 - 인프라와 IT기술을 빌려주고, 다양한 지원 서비스도 함께 제공 - 임대 서버가 이에 해당함, OS가 설치된 서버에 사용자가 애플리케이션 등을 설치해서 사용해야함
+  ② PaaS(=Platform as a Service, 플랫폼 서비스) - 인프라 서비스에서 한단계 더 발전한 클라우드 서비스 - 인프라와 IT기술을 빌려주고, 다양한 지원 서비스도 함께 제공 - 기반 인프라와 운영체제 관리를 줄이고 애플리케이션 개발과 배포에 집중할 수 있도록 지원
 
-  ③ SaaS(=Software as a Service, 소프트웨어 서비스) - 인프라나 플랫폼 뿐만 아니라 애플리케이션까지 제공 - 과거에 pc나 서버 등에 설치해서 이용해야 했던 소프트웨어를 클라우드를 통해 제공하는 서비스④ EaaS(=Everything as a Service) - Iaas, Paas, SaaS 세가지를 통칭하는 말 - XaaS 라고도 함 - AWS는 EaaS라고 할 수 있음
+  ③ SaaS(=Software as a Service, 소프트웨어 서비스) - 인프라나 플랫폼 뿐만 아니라 애플리케이션까지 제공 - 과거에 pc나 서버 등에 설치해서 이용해야 했던 소프트웨어를 클라우드를 통해 제공하는 서비스
+
+  ④ EaaS(=Everything as a Service) - Iaas, Paas, SaaS 세가지를 통칭하는 말 - XaaS 라고도 함 - AWS는 EaaS라고 할 수 있음
 
 ![img](https://blog.kakaocdn.net/dn/cnmPNB/btrxr34vz3L/jcAikwqucMgoeWOHqCDgs1/img.png)
 
 ### 3. 클라우드 컴퓨팅(cloud computing)이란?
 
-- 클라우드를 통해 하는 것
+- 클라우드를 통해 하는 것
   가상화된 컴퓨팅 리소스를 제공
 - 클라우드 컴퓨팅으로 직접 물리적 서버를 관리하거나 자체 서버에서 소프트웨어 어플리케이션을 실행하지 않아도 됨 → 가상의 컴퓨팅 환경 만드는 것이 가능
 
@@ -69,13 +68,13 @@ AWS는 사전 확약금이나 장기 약정 없이 저렴한 종량 과금제 �
 
 확장형 글로벌 인프라를 구축 및 관리하고, 더 저렴한 요금의 형태로 사용자에게 비용 절감 혜택을 고스란히 돌려준다.
 
-자본비용을 가변비용으로 대체하여 시간대별로도 자원을 끌수있음.
+자본비용을 가변비용으로 대체하여 시간대별로도 자원을 줄일 수 있음.
 
 - 속도 및 민첩성 개선
 
 데이터센터운영 및 유지관리에 비용투자 불필요
 
-몇분만에 전세게에 배포
+몇분만에 전 세계에 배포
 
 AWS는 언어 및 운영 체제에 구애받지 않는 플랫폼이다. 따라서 사용자의 비즈니스에 가장 적합한 개발 플랫폼 또는 프로그래밍 모델을 선택할 수 있다. 사용할 서비스를 한 개 또는 여러 개 선택하고, 그 사용 방식도 선택할 수 있다.
 
@@ -88,3 +87,8 @@ AWS는 언어 및 운영 체제에 구애받지 않는 플랫폼이다. 따라�
 - 규모의 경제로 얻게되는 이점
 
 - 몇 분 만에 전 세계에 배포 가능 등
+
+## 참고
+
+- [AWS: 클라우드 컴퓨팅 유형](https://aws.amazon.com/ko/types-of-cloud-computing/)
+- [AWS: 무료 사용 안내](https://aws.amazon.com/ko/free/)

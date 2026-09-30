@@ -3,9 +3,6 @@ title: "[Java] 객체 자신을 가리키는 this"
 categories:
   - Java
 tags: [Java, Fastcampus]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -14,7 +11,7 @@ comments: true
 ## this가 하는 일
 
 - 인스턴스 자신의 메모리를 가리킴
-- 생성자에서 또 다른 생성자를 호출 할때 사용
+- 생성자에서 또 다른 생성자를 호출할때 사용
 - 자신의 주소(참조값)을 반환 함
 
 ## 생성된 인스턴스 메모리의 주소를 가짐
@@ -51,9 +48,6 @@ public class Person {
 	}
 }
 ```
-
-<br>
-
 ## 자신의 주소를 반환하는 this
 
 ```java

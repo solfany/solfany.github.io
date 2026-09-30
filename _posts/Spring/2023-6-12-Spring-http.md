@@ -1,11 +1,8 @@
 ---
-title: "[Spring MVC]HTTP와 HttpServletRequest  "
+title: "[Spring MVC] HTTP와 HttpServletRequest"
 categories:
   - Spring
 tags: [Spring, HTTP, AWS]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -45,7 +42,7 @@ HTTP 라는 양식을 정해서 서로 전달하고 받자! 하고 언어를 정
 
 HTTP 는 stateless 이다. 즉 State 를 저장하지 않는다.
 
-위의 말의 의미는 요청/응답하는 정보가 저장되지 않는다는 뜻이다. (여러가지의 요청/응답 과정을 거칠 때 그것들끼리 연결되서 작동하는것이 아니다. )
+위의 말의 의미는 요청/응답하는 정보가 저장되지 않는다는 뜻이다. (여러 가지의 요청/응답 과정을 거칠 때 그것들끼리 연결되서 작동하는것이 아니다. )
 
 **클라이언트가 요청을 보내고 응답을 받은 후, 그 다음에 다시 요청을 보낼 때 그 전에 보낸 요청/응답에 대해 알지 못한다.**
 
@@ -77,7 +74,7 @@ request 도 데이터를 담아서 요청할 수 있고, response 에서 데이�
 
 위에서 얘기한 어떤 사항들을 요청하는지는
 
-**Content-type** 에 의해서 결정된다.
+**Content-type** 에 의해서 결정된다.
 
 이런 내용들은 개발자도구 Network 패널에서 모두 확인 가능하다.
 
@@ -119,7 +116,7 @@ Response 도 request와 마찬가지로 크게 3부분으로 구성되어있다.
 
 - Response의 headers와 동일하다.
 - 다만 response에서만 사용되는 header 값들이 있다.
-- 예를 들어, `User-Agent` 대신에 `Server` 헤더가 사용된다.
+- 예를 들어, `User-Agent` 대신에 `Server` 헤더가 사용된다.
 
 ### 3. Body
 
@@ -154,13 +151,13 @@ Response 도 request와 마찬가지로 크게 3부분으로 구성되어있다.
 
 ### HttpServletRequest의 메서드
 
-JSP 기본 내장 객체 중 request 객체는 JSP에서 가장 많이 사용되는 객체이다.
+JSP 기본 내장 객체 중 request 객체는 JSP에서 가장 많이 사용되는 객체이다.
 
-웹브라우저 사용자인 클라이언트로부터 서버로 요청이 들어오면
+웹브라우저 사용자인 클라이언트로부터 서버로 요청이 들어오면
 
-서버에서는 HttpServletRequest를 생성하며, 요청정보에 있는 패스로 매핑된 서블릿에게 전달다.
+서버에서는 HttpServletRequest를 생성하며, 요청정보에 있는 패스로 매핑된 서블릿에게 전달다.
 
-이렇게 전달받은 내용들을 파라미터로 Get과 Post 형식으로 클라이언트에게 전달하게 된다.
+이렇게 전달받은 내용들을 파라미터로 Get과 Post 형식으로 클라이언트에게 전달하게 된다.
 
 ![image](https://github.com/solfany/solfany.github.io/assets/123814718/648bf5f9-bb11-4cd8-bf56-5c8527a696bd)
 
@@ -168,9 +165,9 @@ JSP 기본 내장 객체 중 request 객체는 JSP에서 가장 많이 사용�
 
 HttpServletRequest를 사용하면, 값을 받아올 수가 있는데
 
-만약 회원 정보를 컨트롤러로 보냈을 때 HttpServletRequest 객체 안에 모든 데이터들이 들어가게 다!
+만약 회원 정보를 컨트롤러로 보냈을 때 HttpServletRequest 객체 안에 모든 데이터들이 들어가게 다!
 
-원하는 데이터를 꺼낼때는 HttpServletRequest의 객체 안의 메소드인 getParameter()를 이용하면 다.
+원하는 데이터를 꺼낼때는 HttpServletRequest의 객체 안의 메서드인 getParameter()를 이용하면 다.
 
 **(getParameter의 반환타입은 String)**
 

@@ -3,43 +3,26 @@ title: "[React] 플러그인 모음"
 categories:
   - React
 tags: [React]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
-
 
 # 플러그인
 
-### **eslint와 관련 플러그인들**
-
-설명: JavaScript 코드의 문법 오류나 스타일 가이드를 따르지 않은 코드를 찾아주는 도구이다.   
+### eslint와 관련 플러그인들
+설명: JavaScript 코드의 문법 오류나 스타일 가이드를 따르지 않은 코드를 찾아주는 도구이다.\
 
 설치 명령어 👇🏻
 
 ```jsx
 npm install eslint eslint-plugin-react
 ```
-
-<br>
-
-
-### **prettier**
-
-설명: 코드 포맷터로, 코드를 일관된 스타일로 유지하는 데 도움이 된다.  
+### prettier
+설명: 코드 포맷터로, 코드를 일관된 스타일로 유지하는 데 도움이 된다.\
 
 설치 명령어 👇🏻
 
 ```jsx
 npm install prettier
 ```
-
-
-
-<br>
-
-
-
 ### husky와 lint-staged
 
 설명: Git 커밋 전에 린팅이나 테스트를 실행할 수 있도록 도와주는 도구이다.
@@ -49,11 +32,6 @@ npm install prettier
 ```jsx
 npm install husky lint-staged
 ```
-
-
-<br>
-
-
 ### typescript
 
 설명: 자바스크립트에 정적 타입을 추가하는 프로그래밍 언어로, 코드의 안정성을 높여준다.
@@ -63,33 +41,18 @@ npm install husky lint-staged
 ```jsx
  npm install typescript
 ```
-
-
-<br>
-
-
-
 ### jest
 
-설명: 자바스크립트 코드 테스트를 위한 테스트 프레임워크이다. 
+설명: 자바스크립트 코드 테스트를 위한 테스트 프레임워크이다.
 
 설치 명령어 👇🏻
 
 ```jsx
 npm install jest
 ```
-
-
-<br>
-
-
 # npm install
 
 해당 명령어로 설치되어 있는것들
-
-
-<br>
-
 
 ### @reduxjs/toolkit": "^1.9.2
 
@@ -100,11 +63,6 @@ npm install jest
 ```jsx
 npm install @reduxjs/toolkit
 ```
-
-
-<br>
-
-
 ### @”testing-library/jest-dom": "^5.16.5"
 
 설명: Jest와 함께 사용되는 DOM 요소에 대한 테스트를 돕는 라이브러리입니다.
@@ -113,11 +71,6 @@ npm install @reduxjs/toolkit
 ```jsx
 npm install @testing-library/jest-dom
 ```
-
-
-<br>
-
-
 ### "@testing-library/react": "^13.4.0"
 
 설명: React 컴포넌트를 테스트하는 데 사용되는 라이브러리이다.
@@ -127,11 +80,6 @@ npm install @testing-library/jest-dom
 ```jsx
 npm install @testing-library/react
 ```
-
-<br>
-
-
-
 ### "@testing-library/user-event": "^13.5.0"
 
 설명: 사용자 이벤트를 시뮬레이션하여 테스트하는 데 사용되는 라이브러리이다.
@@ -141,11 +89,6 @@ npm install @testing-library/react
 ```jsx
 npm install @testing-library/user-event
 ```
-
-
-<br>
-
-
 ### "axios": "^1.3.3"
 
 설명: HTTP 클라이언트 라이브러리로, API 요청을 쉽게 만들고 처리할 수 있다.
@@ -155,11 +98,6 @@ npm install @testing-library/user-event
 ```jsx
 npm install axios
 ```
-
-
-<br>
-
-
 ### "bootstrap": "^5.2.3"
 
 설명: 반응형 웹사이트 디자인을 쉽게 만드는 CSS 프레임워크이다.
@@ -169,11 +107,6 @@ npm install axios
 ```jsx
 npm install bootstrap
 ```
-
-
-<br>
-
-
 ### "react": "^18.2.0"
 
 설명: 사용자 인터페이스를 구축하는 데 사용되는 JavaScript 라이브러리이다.
@@ -183,11 +116,6 @@ npm install bootstrap
 ```jsx
  npm install react
 ```
-
-
-<br>
-
-
 ### "react-bootstrap": "^2.7.1"
 
 설명: Bootstrap과 함께 사용되는 React 컴포넌트 모음이다.
@@ -197,11 +125,6 @@ npm install bootstrap
 ```jsx
  npm install react-bootstrap
 ```
-
-
-<br>
-
-
 ### "react-dom": "^18.2.0"
 
 설명: React를 웹사이트의 DOM에 렌더링하는 데 사용되는 라이브러리이다.
@@ -211,11 +134,6 @@ npm install bootstrap
 ```jsx
 npm install react-dom
 ```
-
-
-<br>
-
-
 ### "react-redux": "^8.0.5"
 
 설명: React 애플리케이션에서 Redux를 사용하는 데 필요한 바인딩 라이브러리이다.
@@ -225,11 +143,6 @@ npm install react-dom
 ```jsx
 npm install react-redux
 ```
-
-
-<br>
-
-
 ### "react-router-dom": "^6.8.1"
 
 설명: 웹 애플리케이션에서 페이지 간 라우팅을 처리하는 React 라이브러리이다.
@@ -239,11 +152,6 @@ npm install react-redux
 ```jsx
 npm install react-router-dom
 ```
-
-
-<br>
-
-
 ### "react-scripts": "5.0.1"
 
 설명: Create React App에서 사용되는 설정 및 스크립트 모음이다.

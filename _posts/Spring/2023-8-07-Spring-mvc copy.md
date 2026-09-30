@@ -1,12 +1,8 @@
 ---
-title: "[Spring Boot] spring mvc "
+title: "[Spring Boot] spring mvc"
 categories:
   - Spring
 tags: [Java, Spring, MVC 패턴]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -39,7 +35,7 @@ comments: true
 3. 변경이 일어나면, 변경 통지에 대한 처리방법을 구현해야한다.
    모델의 속성중 텍스트 정보가 변경이 된다면, 이벤트를 발생시켜 누군가에서 전달해야하며, 누구낙 모델을 변경하도록 요청하는 이벤트를 보냈을 때 이를 수신하는 처리 방법을 구해야한다.
 
-모델 : 애프리케이션의 정보, 데이터를 나타내며, 시ㅣㄹ제 기능을 처리한 후 결과를 컨트롤러에 반환한다.
+모델 : 애플리케이션의 정보, 데이터를 나타내며, 실제 기능을 처리한 후 결과를 컨트롤러에 반환한다.
 
 ## 뷰의 역할
 
@@ -65,7 +61,7 @@ public void addTitle(String title, List moviesList){
 }
 ```
 
-뷰에서 받은 내용을 가지고 모델 메소드를 호출한다.
+뷰에서 받은 내용을 가지고 모델 메서드를 호출한다.
 
 - 이벤트에 대해서 적당한 모델을 선택한다.
 

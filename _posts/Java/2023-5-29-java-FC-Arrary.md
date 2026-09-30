@@ -3,9 +3,6 @@ title: "[Java] 객체 배열 사용하기"
 categories:
   - Java
 tags: [Java, Fastcampus]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
 
 ![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/fast-main.png?raw=true)
@@ -16,8 +13,6 @@ toc_icon: "bars"
   객체 배열의 경우엔 요소가 되는 객체의 주소가 들어갈(4바이트, 8바이트) 메모리만 할당되고(null) 각 요소 객체는 생성하여 저장해야 함
 
 ![image](https://github.com/solfany/solfany/assets/123814718/39c1be93-80d8-464d-9160-f30f205d3421)
-
-<br>
 
 Book.java
 
@@ -55,9 +50,6 @@ public class Book {
 	}
 }
 ```
-
-<br>
-
 BookArrayTest.java
 
 ```java
@@ -73,9 +65,6 @@ public class BookArrayTest {
 	}
 }
 ```
-
-<br>
-
 ![image](https://github.com/solfany/solfany/assets/123814718/45fc05f1-f58d-4144-b28f-da701d72cc7a)
 
 - 객체를 생성하여 각 배열의 요소로 저장하기
@@ -100,12 +89,9 @@ public class BookArrayTest {
 	}
 }
 ```
-
-<br>
-
 ![image](https://github.com/solfany/solfany/assets/123814718/aefc4e4d-9b24-48c8-aaf8-3003e10ea911)
 
-**Array 사용시 주의 해야할 점**
+**Array 사용 시 주의 해야할 점**
 
 +객체를 만들어서 넣어야한다.
 
@@ -204,8 +190,6 @@ public class ObjectCopy2 {
 
 ![image](https://github.com/solfany/solfany/assets/123814718/8deca474-968e-4d92-8ada-9d9b09126a39)
 
-<br>
-
 # 2차원 배열 사용하기
 
 ## 다차원 배열
@@ -244,8 +228,6 @@ public class TwoDimensionTest {
 
 ![image](https://github.com/solfany/solfany/assets/123814718/a2994122-259f-4d15-82b8-b3f77702790d)
 
-<br>
-
 # 객체 배열을 구현한 클래스 ArrayList
 
 ## java.util 패키지에서 제공되는 ArrayList
@@ -255,15 +237,9 @@ public class TwoDimensionTest {
 - ArrayList는 객체 배열을 좀더 효율적으로 관리하기 위해 자바에서 제공해 주는 클래스
 - 이미 많은 메서드들이 최적의 알고리즘으로 구현되어 있어 각 메서드의 사용 방법만 익히면 유용하게 사용할 수 있음
 
-<br>
-
 ## ArrayList의 주요 메서드
 
 ![image](https://github.com/solfany/solfany/assets/123814718/1a9c4f82-c70a-411a-a328-ef8319f9d61f)
-
-<br>
-
-<br>
 
 ## ArrayList를 활용한 간단한 예제
 

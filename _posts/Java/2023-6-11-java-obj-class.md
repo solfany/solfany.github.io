@@ -3,15 +3,10 @@ title: "[Java] object 클래스, 최상위 클래스"
 categories:
   - Java
 tags: [Java]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
 ![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/1.png?raw=true)
-
-
 
 # Object 클래스 - 모든 클래스의 최상위 클래스
 
@@ -28,9 +23,8 @@ comments: true
 - 모든 클래스의 최상위 클래스는
 - 모든 클래스는 Object에서 상속받고, Object 클래스의 메서드 중 일부는 재정의해서 사용할 수 있음
 - 컴파일러가 extends Object를 추가함
-    
+
     class Student => class Student extends Object
-    
 
 ## toString() 메서드
 

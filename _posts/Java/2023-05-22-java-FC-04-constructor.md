@@ -3,16 +3,11 @@ title: "[Java] 생성자(constructor)와 오버로딩(overloading)"
 categories:
   - Java
 tags: [Java, Fastcampus]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
-
-<br>
 
 ![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/fast-main.png?raw=true)
 
-# ✔️ 생성자에 대해 알아보자 (constructor)
+# 생성자에 대해 알아보자 (constructor)
 
 ## 생성자
 
@@ -31,8 +26,6 @@ toc_icon: "bars"
 - 생성자는 반환 값이 없고, 클래스의 이름과 동일
 - 대부분의 생성자는 외부에서 접근 가능하지만, 필요에 의해 private 으로 선언되는 경우도 있음
 
-<br>
-
 ## 기본 생성자 (default constructor)
 
 - 클래스에는 반드시 적어도 하나 이상의 생성자가 존재
@@ -40,8 +33,6 @@ toc_icon: "bars"
 - 클래스에 생성자가 하나도 없는 경우 컴파일러가 생성자 코드를 넣어 줌
   public Student(){}
 - 매개 변수가 없음, 구현부가 없음
-
-<br>
 
 ## 생성자 만들기
 
@@ -67,9 +58,6 @@ public class Student {
 	}
 }
 ```
-
-<br>
-
 StudentTest.java
 
 ```jsx
@@ -87,19 +75,13 @@ public class StudentTest {
 
 }
 ```
-
-<br>
-<br>
-
-# ✔️ 여러가지 생성자를 정의하는 생성자 오버로딩 (overloading)
+# 여러 가지 생성자를 정의하는 생성자 오버로딩 (overloading)
 
 ## 생성자 정의 하기
 
 - 생성자를 구현해서 사용할 수 있음
 - 클래스에 생성자를 따로 구현하면 기본 생성자 (default constructor)는 제공되지 않음
 - 생성자를 호출하는 코드(client 코드)에서 여러 생성자 중 필요에 따라 호출해서 사용할 수 있음
-
-<br>
 
 UserInfo.java
 
@@ -125,9 +107,6 @@ public class UserInfo {
 	}
 }
 ```
-
-<br>
-
 UserInfoTest.java
 
 ```jsx
@@ -149,11 +128,7 @@ public class UserInfoTest {
 	}
 }
 ```
-
-<br>
-<br>
-
-➕ 학습내용
+➕ 학습내용
 
 ![스크린샷 2023-05-21 오전 1.00.09.png](https://github.com/solfany/solfany.github.io/blob/master/blog/FC04-java/POST1.png?raw=true)
 

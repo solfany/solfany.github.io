@@ -1,11 +1,8 @@
 ---
-title: "[Java]클래스 사용하기(동적 로딩, newInstance)"
+title: "[Java] 클래스 사용하기(동적 로딩, newInstance)"
 categories:
   - Java
 tags: [Java]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 

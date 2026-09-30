@@ -3,24 +3,17 @@ title: "[Java] StringTokenizer"
 categories:
   - Java
 tags: [Java]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
 ![Untitled](https://github.com/solfany/solfany.github.io/blob/master/blog/blog-main/1.png?raw=true)
-### **StringTokenizer**
-
-
-
-<aside style="background-color: #d4e4e9; font-size: 0.4rem; border: 1px solid #000; padding: 10px; border-radius: 5px;">
+### StringTokenizer
+<aside>
 ⚡ StringTokenizer 클래스는 문자열을 우리가 지정한 구분자로 문자열을 쪼개주는 클래스이다. 그렇게 쪼개어진 문자열을 우리는 토큰(token)이라고 부른다.
 </aside>
 
-
-StringTokenizer를 사용하기 위해서는 **java.util.StringTokenizer**를 import해야한다. 사용법은 굉장히 쉽다. 
-사용하는 메소드도 몇개 없다. 자주 사용하는 메소드 설명과 예제를 통해 이 클래스를 어떻게 사용하는지 살펴보자.
+StringTokenizer를 사용하기 위해서는 **java.util.StringTokenizer**를 import해야한다. 사용법은 굉장히 쉽다.
+사용하는 메서드도 몇개 없다. 자주 사용하는 메서드 설명과 예제를 통해 이 클래스를 어떻게 사용하는지 살펴보자.
 
 **생성자(Constructor)**
 
@@ -32,21 +25,20 @@ StringTokenizer를 사용하기 위해서는 **java.util.StringTokenizer**를 i
 
 **int countTokens()**
 
-남아있는 token의 개수를 반환한다. 전체 token의 갯수가 아닌 현재 남아있는 token 개수이다.
+남아있는 token의 개수를 반환한다. 전체 token의 갯수가 아닌 현재 남아있는 token 개수이다.
 
 **boolean hasMoreElements(), boolean hasMoreTokens()**
 
-다음의 token을 반환한다. StringTokenizer는 내부적으로 어떤 위치의 토큰을 사용하였는지 기억하고 있고 그 위치를 다음으로 옮긴다. 두가지 메소드는 모두 같은 값을 반환한다.
+다음의 token을 반환한다. StringTokenizer는 내부적으로 어떤 위치의 토큰을 사용하였는지 기억하고 있고 그 위치를 다음으로 옮긴다. 두가지 메서드는 모두 같은 값을 반환한다.
 
 **Object nextElement(), String nextToken()**
 
-이 두가지 메소드는 다음의 토큰을 반환한다. 두가지 메소드는 같은 객체를 반환하는데 반환형은 다르네요. nextElement는 Object를, nextToken은 String을 반환하고 있다.
+이 두가지 메서드는 다음의 토큰을 반환한다. 두가지 메서드는 같은 객체를 반환하는데 반환형은 다르네요. nextElement는 Object를, nextToken은 String을 반환하고 있다.
 
-### **예제**
+### 예제
+이제 몇 가지 예제를 통해서 더 자세히 알아보도록 합시다.
 
-이제 몇가지 예제를 통해서 더 자세히 알아보도록 합시다.
-
-**0) String 클래스에 있는 split 메소드 이용**
+**0) String 클래스에 있는 split 메서드 이용**
 
 ```java
 public static void main(String[] ar){
@@ -63,9 +55,9 @@ public static void main(String[] ar){
 }
 ```
 
-String클래스의 메소드인 split 메소드를 사용하여 StringTokenizer를 흉내낼 수 있다. split이 반환하는 값은 String 배열이다.
+String클래스의 메서드인 split 메서드를 사용하여 StringTokenizer를 흉내낼 수 있다. split이 반환하는 값은 String 배열이다.
 
-this string includes default delims
+this string includes default delims
 
 ---
 
@@ -91,9 +83,9 @@ public static void main(String[] ar){
 
 **실행결과**
 
-default delims
+default delims
 
-total tokens:5
+total tokens:5
 
 this
 
@@ -187,14 +179,11 @@ public static void main(String[] ar){
 
 ================tokens==================
 
-- 
-- 
+-
+-
 
 =
 
-total tokens:0
+total tokens:0
 
 ---
-
-
-[맨 위로 이동하기](#){: .btn .btn--primary }{: .align-right}

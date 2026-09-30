@@ -1,16 +1,13 @@
 ---
-title: "[ADsP] 분석 프로젝트 관리 영역 "
+title: "[ADsP] 분석 프로젝트 관리 영역"
 categories:
   - Data
 tags: [Data, ADsP]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
 
 - 분석 프로젝트는 다른 유형처럼 범위, 일정, 품질, 리스크, 의사소통 등 **영역별 관리**가 수행되어야 한다.
 - 다양한 데이터에 기반한 분석 기법을 적용하는 특성 때문에 5가지 주요 특성을 고려하여 추가적 관리가 필요하다.
-- 분석과제 주요 특성에는 Data size, Data Complexity, Speed, Analytic Complexity, Accuracy & Precison 등이 있다.
+- 분석과제 주요 특성에는 Data size, Data Complexity, Speed, Analytic Complexity, Accuracy & Precision 등이 있다.
 
 ### 분석과제 정의서
 
@@ -21,9 +18,9 @@ toc_icon: "bars"
 
 ## 분석과제의 주요 5가지 특성 관리 영역
 
-### Data size (데이터의크기)
+### Data size (데이터의 크기)
 
-분석하고자 하는 데이터의 양을 고혀하는 관리 방안 수립 필요
+분석하고자 하는 데이터의 양을 고려하는 관리 방안 수립 필요
 
 ### Data Complexity (데이터의 복잡성)
 

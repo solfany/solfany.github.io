@@ -1,21 +1,18 @@
 ---
-title: "[Spring MVC]원격 프로그램 실행 RequestMapping "
+title: "[Spring MVC] 원격 프로그램 실행 RequestMapping"
 categories:
   - Spring
 tags: [Spring, Fastcampus]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
 ![Untitled](https://tecoble.techcourse.co.kr/static/f11e41fcb46e962e898e8816ba02d5f5/6050d/spring.png)
 
-## 원격 프로그램 실행 (RequesstMapping)
+## 원격 프로그램 실행 (RequestMapping)
 
-우리는 client에서 오는 요청을 처리하기 위한 api url을 매핑할 때 Spring의 `@RequestMapping`이라는 어노테이션을 사용한다. Spring은 사용자의 편리를 위해 RequestMapping을 http에서 지원하는 4가지 method인 `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`과 추가적으로 `@PatchMapping`까지 여러가지 방법의 매핑 방식으로 확대하여 제공하기도 한다.
+우리는 client에서 오는 요청을 처리하기 위한 api url을 매핑할 때 Spring의 `@RequestMapping`이라는 어노테이션을 사용한다. Spring은 사용자의 편리를 위해 RequestMapping을 http에서 지원하는 4가지 method인 `@GetMapping`, `@PostMapping`, `@PutMapping`, `@DeleteMapping`과 추가적으로 `@PatchMapping`까지 여러 가지 방법의 매핑 방식으로 확대하여 제공하기도 한다.
 
-## @RequesstMapping 이란?
+## @RequestMapping 이란?
 
 Spring 개발 시 특정 URL로 요청(Request)을 보내면 Controller에서 어떠한 방식으로 처리할지 정의한다.
 
@@ -28,7 +25,7 @@ Spring 개발 시 특정 URL로 요청(Request)을 보내면 Controller에서 �
 
 ## 사용 이유
 
-@RequesstMapping 작성 예시
+@RequestMapping 작성 예시
 
 ```java
 package com.fastcampus.test;
@@ -39,22 +36,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller // 1. 프로그램 등록
 public class SpringTest {
 
-    @RequesstMapping("/hello") //2. URL과 main()을 연결
+    @RequestMapping("/hello") //2. URL과 main()을 연결
     public void main() {
         System.out.println("Hello");
     }
 }
 ```
 
-로컬로 프로그램을 실행시킨다는 가정 하에 우리는 `http://localhost:8080/hello` 로 Hello 출력 요청을 보낸다.
+로컬로 프로그램을 실행시킨다는 가정 하에 우리는 `http://localhost:8080/hello` 로 Hello 출력 요청을 보낸다.
 
 여기서 알 수 있다싶이 RequestMapping은 요청이 들어왔을 시에 컨트롤러와 매핑해주고, 그 컨트롤러를 실행시켜 응답을 받는 것을 알 수 있다.
 
 또한 실무에서 사용되는 대부분의 컨트롤러는 @RequestMapping을 사용한다. 컨트롤러의 메서드에 @RequestMapping 어노테이션을 붙이면 해당 URL이 호출될 때 이 메서드가 호출된다.
 어노테이션을 기반으로 동작하므로 메서드의 이름을 임의로 지을 수 있다.
 
-## **@RequestMapping이 받는 옵션**
-
+## @RequestMapping이 받는 옵션
 이제는 @RequestMapping이 받을 수 있는 옵션에 대해서 알아보도록 하자.
 
 RequestMapping은 기본적으로 같은 url과 모든 옵션이 같을 수 없다.
@@ -63,15 +59,14 @@ RequestMapping은 기본적으로 같은 url과 모든 옵션이 같을 수 없�
 
 value, method, params, headers, consumes, produces 중에서 하나라도 달라야지 올바르게 handler가 매핑해줄 수 있다.
 
-### **value**
-
+### value
 value는 연결할 url을 말한다. 보통 호스트 주소와 포트 번호를 제외하고 api 설계 규약에 따라 이름을 짓는다. 다음과 같이 설정할 수 있다.
 
 ```java
 @RequestMapping(value = "/example")
 ```
 
-value를 제외하고 다른 옵션이 주어지지 않을 경우에는 `value =`을 생략할 수도 있다.
+value를 제외하고 다른 옵션이 주어지지 않을 경우에는 `value =`을 생략할 수도 있다.
 
 ```java
 @RequestMapping("/example")
@@ -79,20 +74,19 @@ value를 제외하고 다른 옵션이 주어지지 않을 경우에는 `value 
 
 [Ant pattern](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/util/AntPathMatcher.html)을 적용한 url mapping도 가능하다.
 
-예를 들어, 아래와 같이 매핑하면 `/example/1`, `/example/2`, `/example/123` 전부 다 연결할 수 있다.
+예를 들어, 아래와 같이 매핑하면 `/example/1`, `/example/2`, `/example/123` 전부 다 연결할 수 있다.
 
 ```java
 @RequestMapping("/example/**")
 ```
 
-{}사이에 변수를 넣어서 url을 매핑하는 것도 가능하다. 이렇게 매핑한 경우 메서드 인자로 `@PathVariable`을 id로 받아야만 한다.
+{}사이에 변수를 넣어서 url을 매핑하는 것도 가능하다. 이렇게 매핑한 경우 메서드 인자로 `@PathVariable`을 id로 받아야만 한다.
 
 ```java
 @RequestMapping("/example/{id}")
 ```
 
-### **method**
-
+### method
 RequestMethod로 명명되어 있는 아래 8가지 중 하나를 사용하는 것이 일반적이다.
 
 ```java
@@ -115,9 +109,8 @@ GET, POST, PUT, PATCH, DELETE 메서드에 대해서는 각각에 맞는 메서�
 
 이렇게 하면 코드가 간결해지고 가독성이 좋아져 많이 사용되는 기법이다.
 
-### **params**
-
-params는 api url을 `/example?id=1&password=2`와 같이 전달하고 싶을 때 사용하는 것으로 params에 전달한 것과 일치하는 param이 붙으면 이 메서드로 매핑해준다.
+### params
+params는 api url을 `/example?id=1&password=2`와 같이 전달하고 싶을 때 사용하는 것으로 params에 전달한 것과 일치하는 param이 붙으면 이 메서드로 매핑해준다.
 
 ```java
 @RequestMapping(method = RequestMethod.GET, value = "/example", params = {"id", "password"})
@@ -127,8 +120,7 @@ public ResponseEntity<Example> getExample(@RequestParam("id") int paramId, @Requ
 }
 ```
 
-### **headers**
-
+### headers
 header의 정보를 전달해주는 옵션이다. 예를 들어 아래와 같이 content-type을 지정해준 경우
 
 ```java
@@ -139,15 +131,14 @@ public ResponseEntity<Example> getExample3(@PathVariable("text") String text) {
 }
 ```
 
-### **produces**
-
+### produces
 response의 accept-request header가 특정 옵션으로 반환될 것을 지정하는 옵션이다.
 
 응답이 무엇인지 미리 예측하는 것이 불가능하기 때문에 같은 url로 요청이 들어왔을 때 produces 옵션으로 구분해서 실행하는 것은 불가능하다.
 
-그리고 `@RestController`에서 ResponseEntity를 반환하는 경우에는 기본으로 `application/json`으로 값이 지정되어 있기 때문에 특정 옵션을 설정할 수 없다.
+그리고 `@RestController`에서 ResponseEntity를 반환하는 경우에는 기본으로 `application/json`으로 값이 지정되어 있기 때문에 특정 옵션을 설정할 수 없다.
 
-produces는 필수 옵션이 아니므로 따로 지정해주지 않아도 `application/json`으로 기본 값이 전달되거나 와일드카드로 값이 전달된다.
+produces는 필수 옵션이 아니므로 따로 지정해주지 않아도 `application/json`으로 기본 값이 전달되거나 와일드카드로 값이 전달된다.
 
 ```java
 @GetMapping(value = "/test", produces = MediaType.TEXT_PLAIN_VALUE)
@@ -158,17 +149,16 @@ public String getExample() {
 
 위와 같이 사용할 수 있다.
 
-### **consumes**
-
+### consumes
 request의 content-type request header가 일치하는 것을 찾는 옵션이다.
 
 요청에 들어오는 인자 값이 무엇인지에 따라서 같은 url, method임에도 구분이 가능하다.
 
-하지만 `@RequestBody`와 `@ModelAttribute`의 경우 HttpMessageConverter에서 객체로 변환하는 과정을 지나며 기본 값으로 `application/json`이 지정되어 있기 때문에 특정 옵션을 줄 수 없다.
+하지만 `@RequestBody`와 `@ModelAttribute`의 경우 HttpMessageConverter에서 객체로 변환하는 과정을 지나며 기본 값으로 `application/json`이 지정되어 있기 때문에 특정 옵션을 줄 수 없다.
 
 consumes는 필수 옵션이 아니므로 지정해주지 않아도 된다.
 
-이 경우 `@RequestBody`, `@ModelAttribute`는 `application/json`이 기본 값, `@RequestParam`, `@PathVariable`은 `text/plan`이 기본 값으로 전달된다.
+이 경우 `@RequestBody`, `@ModelAttribute`는 `application/json`이 기본 값, `@RequestParam`, `@PathVariable`은 `text/plan`이 기본 값으로 전달된다.
 
 ---
 

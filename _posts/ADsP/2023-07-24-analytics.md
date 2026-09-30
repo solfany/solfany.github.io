@@ -3,9 +3,6 @@ title: "[Data] 데이터 사이언스의 영역, 요구 역량"
 categories:
   - Data
 tags: [Data]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 ---
 
 ## 데이터 사이언스의 영역
@@ -16,16 +13,16 @@ toc_icon: "bars"
 - 데이터 처리와 관련된 IT 영역
 - 비즈니스 컨설팅 영역
 
-## 데이터 사이언티스의 요구역량
+## 데이터 사이언티스트의 요구역량
 
 ![image](https://github.com/solfany/solfany.github.io/assets/123814718/da709fc7-d07e-45ab-8fe8-390d84787d1d)
 
-**Hard Skil**
+**Hard Skill**
 
 1. 빅데이터에 대한 이론적 지식
 2. 분석 기술에 대한 숙련
 
-**Soft Skil**
+**Soft Skill**
 
 1. 통찰력 있는 사고 분석
 2. 설득력 있는 전달
@@ -44,9 +41,3 @@ toc_icon: "bars"
 ### 생산 → 시장창조
 
 - 공급자 중심의 기술경쟁에서 무형자산의 경쟁으로 변화
-
-  개인 공부 기록용 블로그입니다.
-  본문에 오류가 포함되어 있을 수도 있습니다.
-  댓글 또는 메일 주시면 수정하도록 하겠습니다.🍀
-
-[맨 위로 이동하기](#){: .btn .btn--primary }{: .align-right}

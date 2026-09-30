@@ -8,20 +8,10 @@ layout: default
   {% include page__hero_video.html %}
 {% endif %}
 
-{% assign breadcrumbs_enabled = site.breadcrumbs %}
-{% if page.breadcrumbs != null %}
-  {% assign breadcrumbs_enabled = page.breadcrumbs %}
-{% endif %}
-{% if page.url != "/" and breadcrumbs_enabled %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page reading-page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
@@ -29,33 +19,32 @@ layout: default
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
+        <header class="reading-header">
+          <a class="reading-back" href="{{ '/' | relative_url }}">← 기록 목록</a>
+          {% if page.categories.first %}<p class="reading-category">{{ page.categories.first }}</p>{% endif %}
           {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
             <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
           </h1>{% endif %}
-          {% include page__meta.html %}
+          {% if page.date %}<p class="reading-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %-m월 %-d일" }}</time>{% if page.last_modified_at %}<span>수정 {{ page.last_modified_at | date: "%Y.%m.%d" }}</span>{% endif %}</p>{% endif %}
         </header>
       {% endunless %}
 
       <section class="page__content e-content" itemprop="text">
-        {% if page.toc %}
-          <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
-              {% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}
-            </nav>
-          </aside>
-        {% endif %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
-      <footer class="page__meta">
+      <footer class="page__meta reading-footer">
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
         {% include page__taxonomy.html %}
-        {% include page__date.html %}
+        {% if page.date %}
+          <div class="reading-migration">
+            <p>새로운 글은 이전한 블로그에서 이어집니다.</p>
+            <div>{% for destination in site.data.blog.destinations %}<a href="{{ destination.url }}">{{ destination.label }} ↗</a>{% endfor %}</div>
+          </div>
+        {% endif %}
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}

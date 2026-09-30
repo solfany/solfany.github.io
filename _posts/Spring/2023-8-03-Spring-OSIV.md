@@ -3,10 +3,6 @@ title: "[Spring Boot] OSIV 이란?"
 categories:
   - Spring
 tags: [Java, Spring, OSIV]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -28,10 +24,10 @@ OSIV의 동작 방식에 대해서 Spring Framework가 제공하는 OSIV을 통�
 
 스프링이 제공하는 OSIV 클래스는 서블릿 필터에서 적용할지 스프링 인터셉터에서 적용할지에 따라 원하는 클래스를 선택해서 사용하면 된다.
 
-- JPA OEIV 서블릿 필터: [org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter](https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/orm/jpa/support/OpenEntityManagerInViewFilter.html)
-- JPA OEIV 스프링 인터셉터: [org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor](https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/orm/jpa/support/OpenEntityManagerInViewInterceptor.html)
+- JPA OEIV 서블릿 필터: [org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter](https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/orm/jpa/support/OpenEntityManagerInViewFilter.html)
+- JPA OEIV 스프링 인터셉터: [org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor](https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/orm/jpa/support/OpenEntityManagerInViewInterceptor.html)
 
-스프링 프레임워크가 제공하는 OSIV는 **비즈니스 계층에서 트랜잭션을 사용하는 OSIV**다.
+스프링 프레임워크가 제공하는 OSIV는 **비즈니스 계층에서 트랜잭션을 사용하는 OSIV**다.
 
 영속성 컨텍스트는 사용자의 요청 시점에서 생성이 되지만, 데이터를 쓰거나 수정할 수 있는 트랜잭션은 비즈니스 계층에서만 사용할 수 있도록 트랜잭션이 일어난다.
 
@@ -63,7 +59,7 @@ Spring Boot JPA 의존성을 주입 받아 어플리케이션을 구성할 경�
 
 ---
 
-## OSIV 사용시 주의점
+## OSIV 사용 시 주의점
 
 ```
 2021-01-18 21:54:44.750  WARN 36808 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
@@ -112,7 +108,7 @@ OrderService
 - OrderService: 핵심 비즈니스 로직
 - OrderQueryService: 화면이나 API에 맞춘 서비스 (주로 읽기 전용 트랜잭션 사용)
 
-보통 서비스 계층에서 트랜잭션을 유지한다. 두 서비스 모두 트랜잭션을 유지하면서 지연 로딩을 사용할 수있다.
+보통 서비스 계층에서 트랜잭션을 유지한다. 두 서비스 모두 트랜잭션을 유지하면서 지연 로딩을 사용할 수 있다.
 
 ---
 

@@ -1,12 +1,8 @@
 ---
-title: "[Spring Boot] JPA 영속성 "
+title: "[Spring Boot] JPA 영속성"
 categories:
   - Spring
 tags: [Java, Spring]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -34,8 +30,6 @@ EntityManger객체.persist(Entity객체) 를 실행하면 영속성 컨텍스트
 영속성 컨텍스트는 눈에 보이지 않는 논리적인 개념이다.
 또한 EntityManager 를 하나 생성할 때 하나가 만들어지며, EntityManager 를 통해 접근할 수 있고 관리할 수 있다.
 
-<br>
-
 **영속성 컨텍스트의 특징은 아래와 같다!**
 
 ### 영속성 컨텍스트는 Entity 를 식별자 값으로 구분한다.
@@ -46,7 +40,7 @@ JPA 는 보통 트랜잭션을 커밋하는 순간 영속성 컨텍스트에 새
 
 ### 1차 캐시를 이용한다.
 
-영속성 컨텍스트 내부에 존재하는 캐시(Map)를 1차 캐시라 한다. 영속 상태의 Entity는 모두 이곳에 저장되며 키는 @Id 로 매핑한 식별자이며 값은 Entity 인스턴스이다. entityManager.find() 메소드를 호출하면 먼저 1차 캐시에서 Entity를 찾고, 만약 찾는 Entity 가 1차 캐시에 없으면 데이터베이스에서 조회한 후 1차 캐시에 저장하고 영속 상태인 해당 객체를 반환한다.
+영속성 컨텍스트 내부에 존재하는 캐시(Map)를 1차 캐시라 한다. 영속 상태의 Entity는 모두 이곳에 저장되며 키는 @Id 로 매핑한 식별자이며 값은 Entity 인스턴스이다. entityManager.find() 메서드를 호출하면 먼저 1차 캐시에서 Entity를 찾고, 만약 찾는 Entity 가 1차 캐시에 없으면 데이터베이스에서 조회한 후 1차 캐시에 저장하고 영속 상태인 해당 객체를 반환한다.
 
 또한 객체의 동일성을 보장한다.
 

@@ -67,6 +67,55 @@ a:focus-visible, button:focus-visible { outline: 2px solid #555; outline-offset:
   .page__footer footer { padding: 0 22px 22px; }
   .breadcrumbs { padding: 0 22px; }
 }
+.reading-page .page__inner-wrap { margin-top: 0; }
+.reading-header { padding-bottom: 30px; margin-bottom: 32px; border-bottom: 1px solid #eaeaea; }
+.reading-back { display: inline-block; margin-bottom: 38px; font-size: 12px; color: #757575; text-decoration: none; }
+.reading-back:hover { color: #242424; }
+.reading-category { margin: 0 0 10px; font-size: 12px; color: #757575; }
+.reading-header .page__title { margin: 0; font-size: clamp(25px, 3.2vw, 36px); line-height: 1.4; font-weight: 650; overflow-wrap: anywhere; }
+.reading-date { display: flex; flex-wrap: wrap; gap: 16px; margin: 18px 0 0; font-size: 12px; color: #757575; }
+.reading-page .page__content { color: #333; line-height: 1.95; }
+.reading-page .page__content > p { margin-bottom: 1.5em; }
+.reading-page .page__content h1,
+.reading-page .page__content h2,
+.reading-page .page__content h3 { margin-top: 2.2em; margin-bottom: .9em; line-height: 1.5; letter-spacing: -.4px; }
+.reading-page .page__content h1 { font-size: 26px; }
+.reading-page .page__content h2 { font-size: 22px; border-bottom: 0; padding-bottom: 0; }
+.reading-page .page__content h3 { font-size: 18px; }
+.reading-page .page__content li { margin-bottom: .4em; }
+.reading-page .page__content a { color: #444; }
+.reading-page .page__content blockquote { margin: 28px 0; padding: 4px 0 4px 20px; border-left: 2px solid #d9d9d9; color: #666; font-style: normal; }
+.reading-page .page__content blockquote p:last-child { margin-bottom: 0; }
+.reading-page .page__content :not(pre) > code { padding: 3px 6px; border-radius: 3px; background: #f3f3f3; color: #444; font-size: .85em; }
+.reading-page .page__content pre { padding: 20px; font-size: 13px; line-height: 1.8; overflow-x: auto; }
+.reading-page .page__content div.highlighter-rouge { border-radius: 5px; box-shadow: none; margin: 24px 0; }
+.reading-page .page__content div.highlighter-rouge pre { margin: 0; }
+.reading-page .page__content table { display: block; width: 100%; overflow-x: auto; margin: 28px 0; font-size: 14px; border-collapse: collapse; }
+.reading-page .page__content th { background: #fafafa; }
+.reading-page .page__content th, .reading-page .page__content td { padding: 12px 16px; border-bottom: 1px solid #eaeaea; }
+.reading-page .page__content img { display: block; max-width: 100%; height: auto; margin: 24px auto; border-radius: 4px; }
+.reading-page .page__content hr { margin: 40px 0; border-color: #eaeaea; }
+.reading-page .page__content > aside { background: #fafafa !important; color: #666; font-size: 12px !important; line-height: 1.8; border: 1px solid #eaeaea !important; padding: 16px !important; margin-top: 40px; }
+.reading-footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid #eaeaea; }
+.reading-footer .page__taxonomy-item { border: 0; padding: 0; margin-right: 12px; color: #757575; font-size: 12px; box-shadow: none; }
+.reading-migration { margin-top: 24px; font-size: 12px; color: #757575; }
+.reading-migration p { margin: 0 0 8px; }
+.reading-migration > div { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.reading-migration a { color: #555; }
+.reading-pagination { clear: both; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding-top: 28px; margin-top: 32px; border-top: 1px solid #eaeaea; }
+.reading-pagination a { min-width: 0; text-decoration: none; }
+.reading-pagination .reading-pagination__next { text-align: right; }
+.reading-pagination span { display: block; font-size: 11px; color: #757575; margin-bottom: 7px; }
+.reading-pagination strong { display: block; font-size: 13px; font-weight: 500; color: #444; overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  .reading-back { margin-bottom: 28px; }
+  .reading-header { padding-bottom: 24px; margin-bottom: 24px; }
+  .reading-page .page__content { font-size: 15px; }
+  .reading-page .page__content h1 { font-size: 23px; }
+  .reading-page .page__content h2 { font-size: 20px; }
+  .reading-page .page__content pre { padding: 16px; font-size: 12px; }
+  .reading-pagination { gap: 16px; }
+}
 *, *::before, *::after { animation: none !important; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }

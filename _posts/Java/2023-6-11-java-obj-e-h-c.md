@@ -3,9 +3,6 @@ title: "[Java] Object 클래스의 메서드 활용 - equals, hashCode, clone"
 categories:
   - Java
 tags: [Java]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -18,9 +15,8 @@ comments: true
 - 두 인스턴스의 주소 값을 비교하여 true/false를 반환
 - 재정의 하여 두 인스턴스가 논리적으로 동일함의 여부를 구현함
 - 인스턴스가 다르더라도 논리적으로 동일한 경우 true를 반환하도록 재정의 할 수 있음
-    
+
     (같은 학번, 같은 사번, 같은 아이디의 회원...)
-    
 
 ## hashCode() 메서드
 
@@ -32,10 +28,10 @@ comments: true
 ![image](https://github.com/solfany/solfany.github.io/assets/123814718/725816db-a363-4ad4-911f-04579b932f4f)
 
 - 두 인스턴스가 같다는 것은?
-    
+
     두 인스턴스에 대한 equals()의 반환 값이 true
     동일한 hashCode() 값을 반환
-    
+
 - 논리적으로 동일함을 위해 equals() 메서드를 재정의 하였다면 hashCode()메서드도 재정의 하여 동일한 hashCode 값이 반환되도록 한다
 
 Student.java

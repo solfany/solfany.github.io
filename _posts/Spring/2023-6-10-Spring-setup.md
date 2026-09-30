@@ -3,9 +3,6 @@ title: "[Spring MVC] 개발 환경 세팅"
 categories:
   - Spring
 tags: [Spring]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -15,45 +12,37 @@ comments: true
 
 ### VS Code
 
-설치 - https://code.visualstudio.com/download
+설치 - https://code.visualstudio.com/download
 
-- 유용한 플러그인 - https://marketplace.visualstudio.com/VSCode한글 팩 - https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ko
-- open in browser - https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser
-- Prettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-- indent-rainbow - https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow
-- 태그이름 자동변경 - https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
-
-<br>
-
-<br>
+- 유용한 플러그인 - https://marketplace.visualstudio.com/VSCode한글 팩 - https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ko
+- open in browser - https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser
+- Prettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+- indent-rainbow - https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow
+- 태그이름 자동변경 - https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
 
 ### git 설치
 
-[Windows] https://git-scm.com/download/win
+[Windows] https://git-scm.com/download/win
 [Mac] 먼저 terminal열고, 아래와 같이 입력하고 엔터
 
 `$ git`
 
 'git'명령어는... 도구를 설치하시겠습니까?라고 묻는 창이 열리면 '설치'를 클릭.(몇분 소요) 설치 완료 후, 아래와 같이 입력후 엔터.
 
-`$ git --version  
+`$ git --version\
 git version 2.28.0`
 
 위와 같이 나오면 설치가 잘된 것입니다. 버전이 조금 달라도 괜찮
 
-<br>
-
-<br>
-
 ### JDK11 설치
 
-[자바의 정석 - 무료강의] https://youtube.com/playlist?list=PLW2UjW795-f6xWA2_MUhEVgPauhGl3xIp
+[자바의 정석 - 무료강의] https://youtube.com/playlist?list=PLW2UjW795-f6xWA2_MUhEVgPauhGl3xIp
 
-[Windows] https://download.java.net/java/ga/jdk11/openjdk-11_windows-x64_bin.zip
+[Windows] https://download.java.net/java/ga/jdk11/openjdk-11_windows-x64_bin.zip
 
 [Mac] SDKMAN을 이용해서 openJDK설치
 
-- SDKMAN 설치 - https://sdkman.io/install
+- SDKMAN 설치 - https://sdkman.io/install
 
 ```bash
  $ curl -s "https://get.sdkman.io" | bash
@@ -72,20 +61,15 @@ git version 2.28.0`
  $ echo $JAVA_HOME  <--- JAVA_HOME으로 지정된 경로 출력
 ```
 
-**[참고]** openJDK버전별 다운로드 - https://jdk.java.net/archive/
+**[참고]** openJDK버전별 다운로드 - https://jdk.java.net/archive/
 
-Tomcat 9 설치 - https://tomcat.apache.org/download-92.cgi
-[Windows] https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.52/bin/apache-tomcat-9.0.52-windows-x64.zip
-[Mac] https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.52/bin/apache-tomcat-9.0.52.tar.gz다운로드 받은 파일을 설치하고자하는 디렉토리로 이동후 아래의 명령을 실행. 압축을 풀어서 사용자의 홈디렉토리(~)에 저장.
+Tomcat 9 설치 - https://tomcat.apache.org/download-92.cgi
+[Windows] https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.52/bin/apache-tomcat-9.0.52-windows-x64.zip
+[Mac] https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.52/bin/apache-tomcat-9.0.52.tar.gz다운로드 받은 파일을 설치하고자하는 디렉토리로 이동후 아래의 명령을 실행. 압축을 풀어서 사용자의 홈디렉토리(~)에 저장.
 
 ```bash
 $ tar -xvf apache-tomcat-9.0.52.tar.gz -C ~
 ```
-
-<br>
-
-<br>
-
 ### tomcat 실행 방법
 
 ```bash
@@ -110,10 +94,6 @@ ls -la
 
 정상적으로 해당 프로그램이 실행되고 있다는 뜻이다.
 
-<br>
-
-<br>
-
 ### tomcat 종료 방법
 
 ```bash
@@ -122,29 +102,21 @@ ls -la
 
 위의 명령어를 통해 해당 프로그램을 종료 시킬 수 있다.
 
-<br>
-
 ### 프로젝트 시작하기
 
 ![image](https://github.com/solfany/solfany.github.io/assets/123814718/5672c0e0-4559-4b5b-b88f-b6fb459c8fb5)
 
 File → New →
 
-- Spring Starter Project 👉🏻 Spring Boot Project
-- Spring Lagacy Project 👉🏻 Spring Project
+- Spring Starter Project 👉🏻 Spring Boot Project
+- Spring Lagacy Project 👉🏻 Spring Project
   우리가 만들려는 spring 프레임 워크
-
-<br>
 
 ![image](https://github.com/solfany/solfany.github.io/assets/123814718/98e1201e-096e-4715-a932-ad32273dbba4)
 
 project 이름 기입 후 Spring MVC project 선택 후 Finish 해주면 된다.
 
-<br>
-
-<br>
-
-## 이슈사항
+## 이슈 사항
 
 src 폴더의 Error 발생
 
@@ -152,7 +124,7 @@ src 폴더의 Error 발생
 
 위와 같은 에러 발생
 
-원인은 여러가지 요소가 있겠지만
+원인은 여러 가지 요소가 있겠지만
 
 JSP Standard Tag Library)이 없어서 발생한 문제라고 나왔고
 
@@ -176,10 +148,6 @@ src 폴더의 에러가 사라진 것을 확인 할 수 있다.
 
 필자는 두번째 방법으로 해당 오류를 잡았다.
 
-<br>
-
-<br>
-
 ## 톰캣 연동하기
 
 ![image](https://github.com/solfany/solfany.github.io/assets/123814718/fde71df0-9574-4898-a101-b54e41f56b59)
@@ -198,10 +166,6 @@ src 폴더의 에러가 사라진 것을 확인 할 수 있다.
 
 위치는 tomcat을 다운 받은 홈 디렉터리 동일 폴더를 지정 후 Finish 해주면 된다.
 
-<br>
-
-<br>
-
 ## 정상적으로 작동 되는지 Test 해보기
 
 ![image](https://github.com/solfany/solfany.github.io/assets/123814718/d2ec5830-0f6e-4685-beb9-2a05edfd7901)
@@ -218,11 +182,7 @@ Ansi Console 창이 하나 뜨게 되는데 (캡쳐를 못했다 ㅠ)
 
 그럼 “Hello word ” 라는 문구가 테스트 출력 된다.
 
-**그런데 만약 알림창이 뜨면서 출력이 안된다고 하면 아래 해결방법을 참고 바란다.**
-
-<br>
-
-<br>
+**그런데 만약 알림창이 뜨면서 출력이 안된다고 하면 아래 해결 방법을 참고 바란다.**
 
 ## 오류 발생
 

@@ -1,11 +1,8 @@
 ---
-title: "[Spring MVC]동적 리소스, 정적 리소스 RequesstMapping "
+title: "[Spring MVC] 동적 리소스, 정적 리소스 RequestMapping"
 categories:
   - Spring
 tags: [Spring, Fastcampus]
-toc_sticky: true
-toc_label: "목록"
-toc_icon: "bars"
 comments: true
 ---
 
@@ -27,7 +24,7 @@ comments: true
 
 - ex) \*.html, img, js, css
 
-💡 코드로 예시를 살펴보자
+💡 코드로 예시를 살펴보자
 
 ```java
 package com.fastcampus.ch2;
